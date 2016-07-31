@@ -1,0 +1,48 @@
+.view
+  img
+    display: block
+  .pager
+    margin: 70px 0 0 0
+    @include breakpoint($t)
+      margin: 70px 0 0 0
+    @include breakpoint($m)
+      margin: 70px 0 0 0
+  .pager-load-more
+    @include link-style
+  .view-filters::after,
+  .view-content::after
+    @include clearfix
+  .node-teaser
+    h2
+      margin: 0 0 0 0
+.view-3-cols
+  @include views-3-cols
+
+.view-id-recipes
+  .view-content
+    margin-top: 60px
+  .views-row
+    float: left
+    width: 31%
+    margin: 0 1%
+    position: relative
+    z-index: 1
+    .div-table-outer
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 2
+    img
+      margin-bottom: 20px
+
+#views-exposed-form-recipes-block
+  .views-exposed-widget
+    width: 31%
+    margin: 0 1% 12px 1%
+.views-exposed-form
+  .views-exposed-widget
+    float: left
+    padding: 0 0 0 0
+    margin-bottom: 12px

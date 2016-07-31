@@ -1,0 +1,63 @@
+.node-type-recipe
+  .view-mode-full.ds-2col-stacked-fluid
+    margin-top: 40px
+    > .group-header
+      position: relative
+      &::after
+        @include clearfix
+      .g1
+        width: 50%
+        float: left
+        margin-top: -128px
+      .g2
+        width: 50%
+        float: left
+        background: transparent url('i/marmur-skos.png') no-repeat right top
+        position: relative
+        z-index: 1
+        padding: 100px 40px 100px
+        +box-sizing(border-box)
+        &::after
+          position: absolute
+          left: 0
+          bottom: 0
+          width: 100%
+          height: 85px
+          content: " "
+          background: transparent url('i/marmur-skos-after.png') no-repeat right top
+          z-index: 2
+        .field
+          .field-label
+            margin: 0 10px 0 0
+          .field-item
+            display: inline-block
+            margin: 0 5px 0 0
+    > .group-left
+      position: relative
+      margin-top: 40px
+      width: 33%
+      .field-label
+        font-size: 150%
+        line-height: 120%
+    > .group-right
+      position: relative
+      margin-top: 40px
+      width: 66%
+      float: right
+      .field-label
+        font-size: 150%
+        line-height: 120%
+    > .group-footer
+      position: relative
+      padding-top: 40px
+      .field-name-field-image-1,
+      .field-name-field-image-2,
+      .field-name-field-image-3
+        .field-item
+          width: 31%
+          margin: 1%
+          float: left
+      .field-name-field-image-2 img
+        margin-top: 40px
+      .field-name-field-image-3 img
+        margin-top: -40px

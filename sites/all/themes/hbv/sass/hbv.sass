@@ -1,0 +1,61 @@
+@import compass/css3
+@import "breakpoint"
+@import "mixins"
+@import "variables"
+
+@import "reset"
+@import "elements/font-family"
+@import "elements/elements"
+@import "elements/header"
+@import "elements/footer"
+@import "elements/paragraphs"
+@import "elements/blocks"
+@import "elements/views"
+@import "elements/forms"
+@import "elements/node-article"
+@import "elements/node-recipe"
+@import "elements/node_special_2"
+@import "elements/pages"
+@import "elements/front"
+
+
+@import "temp"
+
+body
+  color: #fff
+  background: #000
+  font-size: 12px
+  line-height: 200%
+  overflow-y: scroll
+#main
+  background: #fff
+  color: #000
+  #content
+    @include limiter
+    position: relative
+    z-index: 2
+    padding-left: 20px
+    padding-right: 20px
+
+.npx-image 
+  +box-sizing(border-box)
+.view-id-recipes
+  .npx-image-no
+    margin-top: -34px
+    @media (min-width: 768px) and (max-width: 1019px) 
+      margin-top: -2vw
+  @media (min-width: 1px) and (max-width: 767px) 
+    .views-responsive-grid
+      > .views-row 
+        float: none
+        margin: 0
+        width: 100%
+        .npx-image-no
+          margin-top: -6vw
+  .views-responsive-grid
+    > .views-row
+      margin-top: 0
+    > .views-row + .views-row
+      margin-top: 5vw
+    > .views-row + .views-row + .views-row 
+      margin-top: -5vw

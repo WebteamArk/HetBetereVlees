@@ -1,0 +1,108 @@
+p
+  margin-top: 0
+a:link, a:visited
+  color: $KolorMain
+a:hover, a:active
+  color: $KolorMain
+.text-center
+  text-align: center
+h1
+  font-weight: 300
+  font-size: 30px
+  line-height: 30px
+  display: inline-block
+  text-transform: uppercase
+  padding: 0 0px 20px
+  margin: 0px 0 0px
+  +box-sizing(border-box)
+  @include breakpoint($t)
+    font-size: 30px
+    line-height: 40px
+    padding: 0 0px 20px
+    margin: 0px 0 0px
+  @include breakpoint($m)
+    font-size: 15px
+    line-height: 18px
+    padding: 0 0px 10px
+    margin: 0px 0 0px
+h2
+  font-weight: 300
+  font-size: 22px
+  line-height: 22px
+  text-transform: uppercase
+  +box-sizing(border-box)
+  @include breakpoint($t)
+    font-size: 22px
+    line-height: 22px
+  @include breakpoint($m)
+    font-size: 17px
+    line-height: 20px
+.position-center
+  @include limiter
+.styles-align-center
+  text-align: center
+.styles-mobile-display-none
+  @include breakpoint($m)
+    display: none
+.styles-tablet-display-none
+  @include breakpoint($t)
+    display: none
+.styles-top-margin-0
+  margin-top: 0 !important
+.button, a.button
+  background: none repeat scroll 0 0 transparent
+  border: medium none
+  border-spacing: 0
+  list-style: none outside none
+  margin: 0 7px
+  padding: 0 40px
+  text-align: left
+  text-decoration: none
+  text-indent: 0
+  text-transform: uppercase
+  color: #000
+  font-size: 29px
+  line-height: 29px
+  border: 1px solid #000
+  @include breakpoint($t)
+    font-size: 17px
+    line-height: 22px
+  @include breakpoint($m)
+    font-size: 17px
+    line-height: 22px
+  &:hover
+    opacity: 0.8
+#footer-dark
+  .button, a.button
+    color: #fff
+    border: 1px solid #aaa
+
+.div-table
+  display: table
+.div-row
+  display: table-row
+.div-cell
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+  padding: 0 10px
+#highlighted
+  background: #ebebed url('i/marmur.jpg') no-repeat center top / cover
+  .region-highlighted
+    @include limiter
+    .block
+      padding: 40px 0
+      max-width: 560px
+      margin: 0 auto
+    p
+      margin: 0
+
+.webform-confirmation
+  padding: 40px 0
+  max-width: 560px
+  margin: 0 auto
+.page-node-done
+  #main #content
+    padding: 40px 0
+    max-width: 560px
+    margin: 0 auto
