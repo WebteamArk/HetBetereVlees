@@ -1,0 +1,71 @@
+#footer-dark
+  background: #000 url('i/bg.jpg') no-repeat center center / cover
+.region-footerwhite
+  overflow: hidden
+  background: #fff
+  color: #000
+  padding: 85px 0 85px
+  .block
+    margin: 0
+    @include limiter
+    h2
+      margin: 0 0 40px
+  .block-footer-white
+    text-align: center
+    img
+      display: inline-block
+      vertical-align: middle
+      margin: 0 20px
+
+#footer
+  padding: 20px 0
+  .block
+    margin: 20px 0
+    @include limiter
+    text-align: center
+  .a2a_kit
+    .icon
+      display: inline-block
+      width: 30px
+      height: 30px
+      margin: 0 5px
+      text-indent: -9990px
+      text-align: left
+      background-image: url('i/icons.png')
+      background-repeat: no-repeat
+      padding: 0
+      float: none
+      span
+        display: none
+      &:hover
+        opacity: 0.8
+    .icon.a2a_button_facebook
+      background-position: 0 0
+    .icon.a2a_button_pinterest
+      background-position: -30px 0
+    .icon.a2a_button_printfriendly
+      background-position: -60px 0
+    .icon.a2a_button_email
+      background-position: -90px 0
+
+.region-footerblack
+  padding: 12px 0
+  line-height: 18px
+  font-size: 16px
+  text-align: center
+  background: rgba(0, 0, 0, 0.8)
+  @include breakpoint($t)
+    font-size: 14px
+  @include breakpoint($m)
+    font-size: 14px
+  .block
+    @include limiter
+    margin-bottom: 0
+    .left, .right
+      display: inline-block
+      margin: 0 45px
+    .right
+      a
+        margin-left: 20px
+        display: inline-block
+        color: #fff
