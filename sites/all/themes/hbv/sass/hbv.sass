@@ -17,7 +17,9 @@
 @import "elements/node_special_2"
 @import "elements/pages"
 @import "elements/front"
-
+@import "elements/pages/la_belle_flamande"
+@import "elements/pages/actie"
+@import "elements/pages/chandelier"
 
 @import "temp"
 
@@ -37,16 +39,16 @@ body
     padding-left: 20px
     padding-right: 20px
 
-.npx-image 
+.npx-image
   +box-sizing(border-box)
 .view-id-recipes
   .npx-image-no
     margin-top: -34px
-    @media (min-width: 768px) and (max-width: 1019px) 
+    @media (min-width: 768px) and (max-width: 1019px)
       margin-top: -2vw
-  @media (min-width: 1px) and (max-width: 767px) 
+  @media (min-width: 1px) and (max-width: 767px)
     .views-responsive-grid
-      > .views-row 
+      > .views-row
         float: none
         margin: 0
         width: 100%
@@ -55,7 +57,9 @@ body
   .views-responsive-grid
     > .views-row
       margin-top: 0
+      .views-column
+        position: relative
     > .views-row + .views-row
       margin-top: 5vw
-    > .views-row + .views-row + .views-row 
+    > .views-row + .views-row + .views-row
       margin-top: -5vw

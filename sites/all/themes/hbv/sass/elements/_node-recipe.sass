@@ -1,4 +1,7 @@
 .node-type-recipe
+  #header
+    #block-views-top-paragraph-block
+      margin-bottom: 75px
   .view-mode-full.ds-2col-stacked-fluid
     margin-top: 40px
     > .group-header
@@ -61,3 +64,36 @@
         margin-top: 40px
       .field-name-field-image-3 img
         margin-top: -40px
+    .links.inline
+      clear: both
+      display: block
+      padding: 40px 0
+
+.view-id-recipes
+  .views-column
+    .div-table
+      width: 100%
+      .div-cell
+        vertical-align: middle
+        text-align: center
+        h2
+          opacity: 0
+          +transition(all 600ms linear)
+          color: white
+          padding: 20px 10px 20px
+          max-width: 80%
+          text-align: center
+          +box-sizing(border-box)
+          display: inline-block
+    .views-field-field-clipped-image
+      opacity: 1
+      +transition(all 600ms linear)
+  .views-column:hover
+    .div-table
+      .div-cell
+        h2
+          opacity: 1
+          background: rgba(0,0,0,0.6)
+          padding: 10px 10px 10px
+    .views-field-field-clipped-image
+      opacity: 0.5
