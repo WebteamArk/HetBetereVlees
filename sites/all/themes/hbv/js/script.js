@@ -61,7 +61,7 @@ Drupal.behaviors.hbvHeightCalc = {
   },
   calculateHeight: function(elem) {
     var width = $(elem).width();
-    var height = width * 1.16;
+    var height = width * 1.2;
     $(elem).css('height', Math.ceil(height));
   }
 };
