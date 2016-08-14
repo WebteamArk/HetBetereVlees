@@ -48,18 +48,22 @@ body
       margin-top: -2vw
   @media (min-width: 1px) and (max-width: 767px)
     .views-responsive-grid
-      > .views-row
+      > .views-column
         float: none
         margin: 0
         width: 100%
         .npx-image-no
           margin-top: -6vw
   .views-responsive-grid
-    > .views-row
+    > .views-column
       margin-top: 0
       .views-column
         position: relative
-    > .views-row + .views-row
-      margin-top: 5vw
-    > .views-row + .views-row + .views-row
-      margin-top: -5vw
+    > .views-column + .views-column
+      margin-top: 50px
+      @media all and (min-width: 1px) and (max-width: 1000px)
+        margin-top: 5vw
+    > .views-column + .views-column + .views-column
+      margin-top: -50px
+      @media all and (min-width: 1px) and (max-width: 1000px)
+        margin-top: -5vw
