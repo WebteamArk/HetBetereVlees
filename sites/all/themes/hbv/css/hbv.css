@@ -684,6 +684,25 @@ a.link-absolute {
   display: inline-block;
 }
 
+/* line 90, ../sass/elements/_footer.sass */
+#footer-dark #block-block-4 a {
+  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 95, ../sass/elements/_footer.sass */
+#footer-dark #block-block-4 a:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+@media all and (min-width: 1px) and (max-width: 720px) {
+  /* line 101, ../sass/elements/_footer.sass */
+  #block-block-3 img {
+    margin-bottom: 20px;
+  }
+}
 /* line 1, ../sass/elements/_paragraphs.sass */
 .entity-paragraphs-item {
   margin-left: auto;
@@ -718,6 +737,23 @@ a.link-absolute {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+/* line 17, ../sass/elements/_paragraphs.sass */
+.paragraphs-item-svg-small-link {
+  position: relative;
+  z-index: 1;
+}
+/* line 21, ../sass/elements/_paragraphs.sass */
+.paragraphs-item-svg-small-link .field-name-field-link-to-node a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  text-indent: -99990px;
 }
 
 /* line 2, ../sass/elements/_views.sass */
@@ -1031,11 +1067,38 @@ textarea {
 }
 
 /* line 72, ../sass/elements/_forms.sass */
-#mc_embed_signup #mc-embedded-subscribe-form {
+#mailchimp-signup-subscribe-block-signup-form-dutch-form {
   max-width: 560px;
   margin: 40px auto 30px;
 }
 /* line 75, ../sass/elements/_forms.sass */
+#mailchimp-signup-subscribe-block-signup-form-dutch-form #edit-actions {
+  text-align: right;
+}
+/* line 77, ../sass/elements/_forms.sass */
+#mailchimp-signup-subscribe-block-signup-form-dutch-form #edit-actions input {
+  background: #000;
+  float: right;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 0 70px;
+}
+/* line 82, ../sass/elements/_forms.sass */
+#mailchimp-signup-subscribe-block-signup-form-dutch-form #edit-actions input:hover {
+  opacity: 0.75;
+}
+
+/* line 85, ../sass/elements/_forms.sass */
+#mc_embed_signup {
+  display: none;
+}
+/* line 87, ../sass/elements/_forms.sass */
+#mc_embed_signup #mc-embedded-subscribe-form {
+  max-width: 560px;
+  margin: 40px auto 30px;
+}
+/* line 90, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .mc-field-group {
   clear: left;
   min-height: 30px;
@@ -1043,16 +1106,16 @@ textarea {
   position: relative;
   width: 100%;
 }
-/* line 81, ../sass/elements/_forms.sass */
+/* line 96, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .mc-field-group input {
   border: 2px solid #333;
   margin: 0 0 20px;
 }
-/* line 84, ../sass/elements/_forms.sass */
+/* line 99, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .action-form {
   text-align: right;
 }
-/* line 86, ../sass/elements/_forms.sass */
+/* line 101, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .action-form input#mc-embedded-subscribe.button {
   background: #000;
   float: right;
