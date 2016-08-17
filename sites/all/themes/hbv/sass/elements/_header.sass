@@ -83,7 +83,8 @@
 #header #block-views-top-paragraph-block
   position: relative
   margin-bottom: 20px
-  img
+  z-index: 10
+  .views-field-field-image img
     position: absolute
     display: block
     width: 100% !important
@@ -120,3 +121,14 @@
     @include breakpoint($m)
       font-size: 14px
       line-height: 19px
+  .views-field-field-image-2
+    position: relative
+    img
+      position: absolute
+      display: block
+      width: 100% !important
+      height: auto !important
+      z-index: -1
+      left: 0
+      top: -45px
+      pointer-events: none

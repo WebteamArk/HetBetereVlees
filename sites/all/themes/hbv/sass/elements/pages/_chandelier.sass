@@ -5,7 +5,7 @@
       .region-header
         padding-bottom: 60px
     .region-headermenu
-      background: rgba(53,36,28,0.65) 
+      background: rgba(53,36,28,0.65)
   #footer-dark
     background: #000 url("i/bg-73-2.jpg") no-repeat scroll center center / cover
     .region-footerblack
@@ -20,6 +20,7 @@
   #content
     z-index: 1
     &:after
+      pointer-events: none
       position: absolute
       display: block
       content: " "
@@ -147,7 +148,7 @@
         margin-top: -15%
     .group-footer
       .field-name-field-clipped-image-big svg
-        margin-top: -444px
+        // margin-top: -444px
         position: relative
         z-index: 0
         @media all and (min-width: 1px) and (max-width: 960px)

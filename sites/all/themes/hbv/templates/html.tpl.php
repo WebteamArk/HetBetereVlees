@@ -62,5 +62,11 @@
       <polygon id="hbv-poly-960-1152" fill="none" points="0 185, 0 1152, 960 967, 960 0"/>
     </defs>
   </svg>
+  <!-- global polygon definition -->
+  <svg viewBox="0 0 960 700" width="0" height="0">
+    <defs>
+      <polygon id="hbv-poly-960-700" fill="none" points="0 185, 0 700, 960 515, 960 0"/>
+    </defs>
+  </svg>
 </body>
 </html>

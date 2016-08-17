@@ -1,5 +1,8 @@
 .node-type-page-special
   margin-top: 3.5vw
+.front
+  .entity-paragraphs-item
+    margin: 0
 
 .node-type-special-page
   .group-region-1
@@ -103,14 +106,20 @@
 
 .node-type-front-page
   .node-front-page.view-mode-full
-    margin-top: 25px
-  .entity-paragraphs-item
-    margin-top: 0
-    margin-top: -40px
-    // border: 1px dotted blue
-    @media all and (min-width: 1px) and (max-width: 467px)
-      margin-top: -10vw
+    margin-top: -80px
+  // .entity-paragraphs-item
+  //   margin-top: 0
+  //   margin-top: -40px
+  //   @media all and (min-width: 1px) and (max-width: 467px)
+  //     margin-top: -10vw
   .group-header
+    &::after
+      @include clearfix
+    .gg > div
+      margin-top: 0
+      margin-top: -40px
+      @media all and (min-width: 1px) and (max-width: 467px)
+        margin-top: -5vw
     .g1
       margin-top: 120px
       width: 32%
@@ -121,12 +130,12 @@
         margin: 0 0 0 0
         width: 100%
         clear: both
-        .field-type-paragraphs
-          > .field-items
-            > .field-item
-              float: left
-              width: 49%
-              margin-right: 1%
+        // .field-type-paragraphs
+        //   > .field-items
+        //     > .field-item
+        //       float: left
+        //       width: 49%
+        //       margin-right: 1%
       @media all and (min-width: 1px) and (max-width: 467px)
         float: none
         margin: 0 0 0 0
@@ -157,43 +166,13 @@
       width: 33%
       float: left
       color: #000
-      .paragraphs-item-svg-small-text
-        .field-name-field-body
-          color: #000
       .field-name-field-front-h3
-        > .field-items
-          > .field-item:nth-child(1)
-            .paragraphs-item-svg-small-text
-              .field-name-field-body
-                height: auto
-                top: auto
-                bottom: -15px
-                .field-items
-                  .field-item
-                    background: rgba(255,255,255,0.8)
-                    padding: 20px 40px 50px
-                    p
-                      margin: 0
-      .field-name-field-front-h3
-        > .field-items
-          > .field-item:nth-child(2)
-            a.button
-              margin-left: 0
-            .paragraphs-item-svg-small-text .field-name-field-body
-              height: 300px
-              @media all and (min-width: 1px) and (max-width: 467px)
-                height: 100vw
+        padding: 80px 40px 40px
       @media all and (min-width: 468px) and (max-width: 767px)
         float: none
         margin: 0 0 0 0
         width: 100%
         clear: both
-        .field-type-paragraphs
-          > .field-items
-            > .field-item
-              float: left
-              width: 49%
-              margin-right: 1%
       @media all and (min-width: 1px) and (max-width: 467px)
         float: none
         margin: 0 0 0 0
@@ -201,18 +180,19 @@
         clear: both
   .l-r
     margin-right: 1%
+    clear: both
     .group-left
       position: relative
       z-index: 1
       svg
-        margin-top: -80px
+        margin-top: -100px
         position: relative
         z-index: 10
         @media all and (min-width: 1px) and (max-width: 1000px)
           margin-top: -10vw
     .group-right
       width: 32%
-      margin-top: -10%
+      margin-top: -85%
       position: relative
       z-index: 10
       .paragraphs-item-intro-text
@@ -221,20 +201,25 @@
       .paragraphs-item-svg-small
         margin-top: -60px
       @media all and (min-width: 468px) and (max-width: 767px)
-        width: 70%
-        margin-top: -52%
+        width: 100%
+        margin-top: 0
       @media all and (min-width: 1px) and (max-width: 467px)
         width: 100%
-        margin-top: -10vw
+        margin-top: 0
   .group-footer
     svg
       margin-top: -110px
+      margin-top: 75px
       position: relative
       z-index: 10
       @media all and (min-width: 1px) and (max-width: 1000px)
         margin-top: -10vw
+      @media all and (min-width: 1px) and (max-width: 767px)
+        margin-top: -0vw
     .field-name-field-front-f1
       > .field-items
+        position: relative
+        z-index: 1
         > .field-item:nth-child(1)
           position: relative
           z-index: 1
@@ -245,17 +230,46 @@
             margin-top: -5%
         > .field-item:nth-child(2)
           width: 32%
-          float: right
-          margin-top: -90%
-          position: relative
+          position: absolute
+          right: 0
+          bottom: 180px
           z-index: 10
           +box-sizing(border-box)
           padding: 0 10px 0 0
+          z-index: 2
+          @media all and (min-width: 768px) and (max-width: 1000px)
+            width: 50%
+            bottom: 18vw
           @media all and (min-width: 660px) and (max-width: 767px)
-            width: 40%
-            margin-top: -95%
-            padding: 0 10px 0 0
+            width: 50%
+            bottom: 18vw
           @media all and (min-width: 1px) and (max-width: 659px)
             width: 100%
-            margin-top: 10vw
             padding: 0
+            position: relative
+            right: auto
+            bottom: auto
+
+.node-type-front-page
+  .field-type-viewreference
+    position: relative
+    .views-field-title
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      +box-sizing(border-box)
+      padding: 0
+      // background: transparent url('i/w75.png') right top no-repeat
+      background: rgba(255,255,255,0.75)
+      height: 0
+      overflow: auto
+      @include animacja
+      a
+        text-decoration: none
+      h2
+        padding: 30px 40px 60px 40px
+        color: #333
+    &:hover
+      .views-field-title
+        height: auto
