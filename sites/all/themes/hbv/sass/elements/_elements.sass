@@ -37,6 +37,15 @@ h2
   @include breakpoint($m)
     font-size: 17px
     line-height: 20px
+  .h2-big &
+    font-size: 34px
+    line-height: 34px
+    @include breakpoint($t)
+      font-size: 26px
+      line-height: 26px
+    @include breakpoint($m)
+      font-size: 26px
+      line-height: 26px
 .position-center
   @include limiter
 .styles-align-center
@@ -49,21 +58,17 @@ h2
     display: none
 .styles-top-margin-0
   margin-top: 0 !important
-.button, a.button
+.button, a.button, a.ebutton
   display: inline-block
   text-align: center
-  background: none repeat scroll 0 0 transparent
-  border: medium none
-  border-spacing: 0
-  list-style: none outside none
-  margin: 0 7px
+  margin: 0
   padding: 0 40px
   text-decoration: none
   text-indent: 0
   text-transform: uppercase
   color: #000
-  font-size: 26px
-  line-height: 35px
+  font-size: 22px
+  line-height: 30px
   border: 1px solid #000
   +box-sizing(border-box)
   min-width: 232px
@@ -75,10 +80,10 @@ h2
     min-width: 232px
   @include breakpoint($t)
     font-size: 17px
-    line-height: 22px
+    line-height: 30px
   @include breakpoint($m)
     font-size: 17px
-    line-height: 22px
+    line-height: 30px
   &:hover
     opacity: 0.8
 #footer-dark
@@ -93,7 +98,6 @@ h2
 .div-cell
   display: table-cell
   vertical-align: middle
-  text-align: center
   padding: 0 10px
 #highlighted
   background: #ebebed url('i/marmur.jpg') no-repeat center top / cover
@@ -115,7 +119,8 @@ h2
     padding: 40px 0
     max-width: 560px
     margin: 0 auto
-
+.margin0
+  margin: 0
 a.black-button
   margin: 40px 0 0 0
   background: #000
@@ -126,6 +131,8 @@ a.black-button
   display: inline-block
   text-decoration: none
   @include hover
+  &.margin0
+    margin: 0
 
 .node
   .links.inline
@@ -133,8 +140,21 @@ a.black-button
     display: none
 a.link-absolute
   display: block
+  position: absolute
   width: 100%
   height: 100%
   left: 0
   top: 0
-  z-index: 2
+  z-index: 10
+.elang, a.ebutton.elang
+  display: none
+.i18n-nl
+  .elang.nl
+    display: block
+  a.ebutton.elang.nl
+    display: inline-block
+.i18n-fr
+  .elang.fr
+    display: block
+  a.ebutton.elang.fr
+    display: inline-blocks

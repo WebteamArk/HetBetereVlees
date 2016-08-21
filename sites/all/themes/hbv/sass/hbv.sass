@@ -26,9 +26,15 @@
 body
   color: #fff
   background: #000
-  font-size: 12px
-  line-height: 200%
+  font-size: 16px
+  line-height: 22px
   overflow-y: scroll
+  @include breakpoint($t)
+    font-size: 14px
+    line-height: 19px
+  @include breakpoint($m)
+    font-size: 14px
+    line-height: 19px    
 #main
   background: #fff
   color: #000
