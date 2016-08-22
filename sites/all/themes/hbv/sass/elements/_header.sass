@@ -15,6 +15,7 @@
   &:after
     @include clearfix
   #block-menu-menu-top-menu
+    float: left
     ul
       @include ulReset
       li
@@ -27,13 +28,26 @@
           text-transform: uppercase
           &:hover
             opacity: 0.8
+  #block-locale-language
+    float: right
+    margin: 0 0 0 0
+    ul
+      @include ulReset
+      li
+        display: inline-block
+        padding: 0px 10px
+        line-height: 40px
+      li.en
+        display: none
+
   #block-system-main-menu
-    position: absolute
+    position: relative
     top: 0
     right: 0
     width: 275px
     min-height: 40px
     z-index: 499
+    float: right
 
     .toggler
       width: 40px
@@ -49,14 +63,24 @@
       clear: both
       top: 40px
       +box-shadow(none)
+      li.special-margin-top
+        margin-top: 20px
+      span.nolink
+        color: #000
+        line-height: 20px
+        padding: 0 20px 0 40px
+        text-transform: uppercase
+        font-weight: bold
       a
         color: #000
         line-height: 20px
         padding: 0 20px 0 40px
         border: none
+        &:hover
+          font-weight: bold
     .responsive-menus
       &.responsive-toggled
-        background: #e8e8e9 url('i/marmur600.jpg') no-repeat center center /  cover
+        background: #e8e8e9 url('i/top-menu-top.jpg') repeat left bottom
         padding-bottom: 40px
         .toggler
           float: left
@@ -65,6 +89,11 @@
           background-color: transparent
           background-image: none
           clear: both
+          background: #e8e8e9 url('i/top-menu-bottom.jpg') repeat left top
+          padding: 0 0 40px
+          .toggler
+            float: left
+            background: transparent url('i/menu-mobile-close.png') no-repeat 0 0
 
 
 
@@ -78,6 +107,13 @@
     float: none
     img
       display: block
+.page-node-73
+  #logo-outer
+    a#logo
+      display: block
+      max-width: 256px
+      margin: 20px auto 40px
+
 .front #header #block-views-top-paragraph-block
   margin-bottom: 85px
 #header #block-views-top-paragraph-block
@@ -132,3 +168,5 @@
       left: 0
       top: -45px
       pointer-events: none
+    @include breakpoint($m)
+      display: none

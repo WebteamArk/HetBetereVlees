@@ -66,6 +66,106 @@ Drupal.behaviors.hbvHeightCalc = {
   }
 };
 
+Drupal.behaviors.hbvMultiselect = {
+  attach: function(context, settings) {
+    $('#edit-field-merk-tid', context).once('npx-multiselect').each(function() {
+      $(this).multiselect({
+        columns: 1,
+        placeholder: Drupal.t('merk'),
+        onLoad: function (element) {
+          $(element).hide();
+          var $optionsWrapper = $(element).next('.ms-options-wrap').find('.ms-options');
+          $optionsWrapper.append('<input type="submit" value="' + Drupal.t('bevestigen') + '" />');
+          $optionsWrapper.append('<input type="button" class="reset" value="' + Drupal.t('reset') + '" />');
+          $optionsWrapper.find('.reset').click(function(){
+            $optionsWrapper.find('input[type="checkbox"]:checked').click();
+          });
+          $optionsWrapper.find('input[type="submit"]').click(function(e){
+            e.preventDefault();
+            $('#edit-submit-recipes').click();
+          });
+        },
+      });
+    });
+    $('#edit-field-gang-tid', context).once('npx-multiselect').each(function() {
+      $(this).multiselect({
+        columns: 1,
+        placeholder: Drupal.t('gang'),
+        onLoad: function (element) {
+          $(element).hide();
+          var $optionsWrapper = $(element).next('.ms-options-wrap').find('.ms-options');
+          $optionsWrapper.append('<input type="submit" value="' + Drupal.t('bevestigen') + '" />');
+          $optionsWrapper.append('<input type="button" class="reset" value="' + Drupal.t('reset') + '" />');
+          $optionsWrapper.find('.reset').click(function(){
+            $optionsWrapper.find('input[type="checkbox"]:checked').click();
+          });
+          $optionsWrapper.find('input[type="submit"]').click(function(e){
+            e.preventDefault();
+            $('#edit-submit-recipes').click();
+          });
+        },
+      });
+    });
+    $('#edit-field-ingredienten-tid', context).once('npx-multiselect').each(function() {
+      $(this).multiselect({
+        columns: 1,
+        placeholder: Drupal.t('ingrediënten'),
+        onLoad: function (element) {
+          $(element).hide();
+          var $optionsWrapper = $(element).next('.ms-options-wrap').find('.ms-options');
+          $optionsWrapper.append('<input type="submit" value="' + Drupal.t('bevestigen') + '" />');
+          $optionsWrapper.append('<input type="button" class="reset" value="' + Drupal.t('reset') + '" />');
+          $optionsWrapper.find('.reset').click(function(){
+            $optionsWrapper.find('input[type="checkbox"]:checked').click();
+          });
+          $optionsWrapper.find('input[type="submit"]').click(function(e){
+            e.preventDefault();
+            $('#edit-submit-recipes').click();
+          });
+        },
+      });
+    });
+    $('#edit-field-budget-tid', context).once('npx-multiselect').each(function() {
+      $(this).multiselect({
+        columns: 1,
+        placeholder: Drupal.t('budget'),
+        onLoad: function (element) {
+          $(element).hide();
+          var $optionsWrapper = $(element).next('.ms-options-wrap').find('.ms-options');
+          $optionsWrapper.append('<input type="submit" value="' + Drupal.t('bevestigen') + '" />');
+          $optionsWrapper.append('<input type="button" class="reset" value="' + Drupal.t('reset') + '" />');
+          $optionsWrapper.find('.reset').click(function(){
+            $optionsWrapper.find('input[type="checkbox"]:checked').click();
+          });
+          $optionsWrapper.find('input[type="submit"]').click(function(e){
+            e.preventDefault();
+            $('#edit-submit-recipes').click();
+          });
+        },
+      });
+    });
+    $('#edit-field-moeilijkheidsgraad-tid', context).once('npx-multiselect').each(function() {
+      $(this).multiselect({
+        columns: 1,
+        placeholder: Drupal.t('moeilijkheidsgraad'),
+        onLoad: function (element) {
+          $(element).hide();
+          var $optionsWrapper = $(element).next('.ms-options-wrap').find('.ms-options');
+          $optionsWrapper.append('<input type="submit" value="' + Drupal.t('bevestigen') + '" />');
+          $optionsWrapper.append('<input type="button" class="reset" value="' + Drupal.t('reset') + '" />');
+          $optionsWrapper.find('.reset').click(function(){
+            $optionsWrapper.find('input[type="checkbox"]:checked').click();
+          });
+          $optionsWrapper.find('input[type="submit"]').click(function(e){
+            e.preventDefault();
+            $('#edit-submit-recipes').click();
+          });
+        },
+      });
+    });
+  },
+};
+
 $(window).resize(function () {
   $('.hbv-div-height-processed').each(function() {
     Drupal.behaviors.hbvDivHeight.calculateHeight(this);

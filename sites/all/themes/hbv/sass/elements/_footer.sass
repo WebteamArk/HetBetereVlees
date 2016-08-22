@@ -10,13 +10,36 @@
     @include limiter
     h2
       margin: 0 0 40px
-  .block-footer-white
+  .block-footer-white,
+  #block-block-3
     text-align: center
+    span
+      display: none
     img
+      display: block
+      margin: 0
+    a
       display: inline-block
-      vertical-align: middle
+      vertical-align: top
       margin: 0 20px
-
+    a.link1
+      margin-top: 41px
+    a.link3
+      margin-top: 14px
+    @include breakpoint($m)
+      span
+        display: block
+        height: 1px
+      a
+        display: inline-block
+        vertical-align: top
+        margin: 0 20px
+      a.link1
+        margin-top: 0px
+      a.link2
+        margin-top: 25px
+      a.link3
+        margin-top: 25px
 #footer
   padding: 20px 0
   .block
@@ -24,6 +47,8 @@
     @include limiter
     text-align: center
   .a2a_kit
+    display: inline-block
+    vertical-align: top
     .icon
       display: inline-block
       width: 30px
@@ -44,10 +69,27 @@
       background-position: 0 0
     .icon.a2a_button_pinterest
       background-position: -30px 0
-    .icon.a2a_button_printfriendly
-      background-position: -60px 0
     .icon.a2a_button_email
-      background-position: -90px 0
+      background-position: -60px 0
+
+  a.icon.a2a_button_printfriendly
+    display: inline-block
+    width: 30px
+    height: 30px
+    margin: 0 5px
+    text-indent: -9990px
+    text-align: left
+    background-image: url('i/icons.png')
+    background-repeat: no-repeat
+    background-position: -90px 0
+    padding: 0
+    float: none
+    opacity: 0.6
+    vertical-align: top
+    &:hover
+      opacity: 1
+
+
 
 .region-footerblack
   padding: 12px 0
@@ -75,15 +117,7 @@
 #footer-dark  a.button
   text-transform: none
 
-#footer
-  .a2a_kit
-    .icon.a2a_button_email
-      display: none
-.node-type-recipe
-  #footer
-    .a2a_kit
-      .icon.a2a_button_email
-        display: inline-block
+
 
 #footer-dark
   #block-block-4
@@ -92,9 +126,14 @@
       border: 1px solid rgba(255,255,255,0.50)
       color: #fff
       color: rgba(255,255,255,0.50)
+      margin: 0 7px
+      @include breakpoint($m)
+        margin-bottom: 15px
     a:hover
       border: 1px solid #fff
       color: #fff
+    a + a
+      margin: 0 7px 0 8px
 
 @media all and (min-width: 1px) and (max-width: 720px)
   #block-block-3
