@@ -70,8 +70,38 @@
       clear: both
       display: block
       padding: 40px 0
+  .node.node-recipe .group-footer
+    display: none
+// .node-type-recipe END
 
-.view-id-recipes
+.view-id-recipes_3_random
+  padding-top: 40px
+  .view-content
+    @media all and (min-width: 860px)
+      .views-row:nth-child(1)
+        margin-top: 50px
+      .views-row:nth-child(2)
+        margin-top: 100px
+    &:after
+      @include clearfix
+  .views-row
+    width: 33%
+    float: left
+    +box-sizing(border-box)
+    padding: 0 1%
+    @media all and (min-width: 500px) and (max-width: 859px)
+      width: 50%
+      float: none
+      &:nth-child(3)
+        display: none
+    @media all and (min-width: 1px) and (max-width: 499px)
+      width: 100%
+      float: none
+
+
+
+.view-id-recipes,
+.view-id-recipes_3_random
   .views-row
     position: relative
     h2

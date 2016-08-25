@@ -8,21 +8,6 @@
     background: #000 url("i/bg-70-2.jpg") no-repeat scroll center center / cover
     .region-footerblack
       background: rgba(0, 0, 0, 0.25) none repeat scroll 0 0
-  #content
-    z-index: 1
-    &:after
-      position: absolute
-      display: block
-      content: " "
-      width: 100%
-      height: 340px
-      background: transparent url('i/p70-1.png') no-repeat center top / contain
-      z-index: 2
-      left: -1%
-      top: -260px
-      // border: 1px solid red
-      @media all and (min-width: 1px) and (max-width: 780px)
-        display: none
 .page-node-70
   .node-special-page-type-2.view-mode-full
     color: #000
@@ -48,21 +33,7 @@
     .group-left
       .field-name-field-left-column-paragraph
         color: #000
-        .field-item:nth-child(2)
-          position: relative
-          z-index: 1
-          &:after
-            display: block
-            position: absolute
-            content: " "
-            width: 170px
-            height: 140px
-            right: 10px
-            top: 10px
-            z-index: 10
-            background: transparent url('i/p70.png') no-repeat center center / contain
-          img
-            margin-top: 25px
+        
     .group-right
       .field-name-field-right-column-paragraph
         .field-item:nth-child(1)

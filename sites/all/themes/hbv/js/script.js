@@ -66,6 +66,20 @@ Drupal.behaviors.hbvHeightCalc = {
   }
 };
 
+/*
+Drupal.behaviors.hbvForceFocus = {
+  attach: function(context, settings) {
+    $('#views-exposed-form-distributors-block #edit-combine', context).once('npx-force-focus').each(function() {
+      //$(this).focus();
+      $(this).keypress(function(event){
+        if (event.keyCode === 10 || event.keyCode === 13) 
+          event.preventDefault();
+      });
+    });
+  },
+};
+*/
+
 Drupal.behaviors.hbvMultiselect = {
   attach: function(context, settings) {
     $('#edit-field-merk-tid', context).once('npx-multiselect').each(function() {
@@ -164,6 +178,57 @@ Drupal.behaviors.hbvMultiselect = {
       });
     });
   },
+};
+
+Drupal.behaviors.hbvAnimateAssets = {
+  attach: function(context, settings) {
+    var duration = 500;
+    $('.view-top-paragraph img', context).once('npx-animate-assets').each(function() {
+      $(this).css('margin-left', -$('body').outerWidth());
+      $(this).waypoint(function(event, direction) {
+        $(this).animate({
+          'margin-left': 0
+        }, { duration: duration });
+      }, 
+      { offset: '100%', triggerOnce: true});
+    });
+    $('.views-field-field-slogan .div-image img', context).once('npx-animate-assets').each(function() {
+      $(this).css('margin-left', -$('body').outerWidth());
+      $(this).waypoint(function(event, direction) {
+        $(this).animate({
+          'margin-left': 0
+        }, { duration: duration });
+      }, 
+      { offset: '50%', triggerOnce: true});
+    });
+    $('.field-name-field-upper-layer-with-image img', context).once('npx-animate-assets').each(function() {
+      $(this).css('margin-left', -$('body').outerWidth());
+      $(this).waypoint(function(event, direction) {
+        $(this).animate({
+          'margin-left': 0
+        }, { duration: duration });
+      }, 
+      { offset: '50%', triggerOnce: true});
+    });
+    $('.field-name-field-background-image', context).once('npx-animate-assets').each(function() {
+      $(this).css('margin-right', $('body').outerWidth());
+      $(this).waypoint(function(event, direction) {
+        $(this).animate({
+          'margin-right': 0
+        }, { duration: duration });
+      }, 
+      { offset: '50%', triggerOnce: true});
+    });
+//    $('.field-name-field-intro-text img', context).once('npx-animate-assets').each(function() {
+//      $(this).css('margin-left', -$('body').outerWidth());
+//      $(this).waypoint(function(event, direction) {
+//        $(this).animate({
+//          'margin-left': 0
+//        }, { duration: duration });
+//      }, 
+//      { offset: '50%', triggerOnce: true});
+//    });
+  }
 };
 
 $(window).resize(function () {

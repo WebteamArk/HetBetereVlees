@@ -105,8 +105,9 @@
     max-width: 256px
     margin: 40px auto
     float: none
+    text-align: center
     img
-      display: block
+      display: inline-block
 .page-node-73
   #logo-outer
     a#logo
@@ -116,6 +117,12 @@
 
 .front #header #block-views-top-paragraph-block
   margin-bottom: 85px
+.image-1-top-margin-negative-120
+  #header
+    #block-views-top-paragraph-block
+      .views-field-field-image
+        img
+          top: -120px
 #header #block-views-top-paragraph-block
   position: relative
   margin-bottom: 20px
@@ -145,6 +152,11 @@
       margin: 0 0 20px
       padding: 0
       color: #fff
+      font-size: 34px
+      line-height: 34px
+      @include breakpoint($m)
+        font-size: 26px
+        line-height: 26px
   .views-field-field-body
     position: relative
     z-index: 2

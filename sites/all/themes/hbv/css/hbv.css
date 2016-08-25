@@ -36,10 +36,11 @@ strong, .acties-text, #block-system-main-menu a.active {
   font-weight: 700;
 }
 
-/* line 7, ../sass/elements/_font-family.sass */
-.amatic, h1, h2, .title, .quote, .button, .title-recipe, .acties-title, .ebutton,
-.view-id-recipes ul + input,
-.view-id-recipes ul + input + input {
+/* line 12, ../sass/elements/_font-family.sass */
+.webform-client-form input,
+.webform-client-form textarea,
+.block-mailchimp-signup input,
+.views-field-field-title h1 {
   font-family: "Amatic SC";
   font-weight: 700;
 }
@@ -547,31 +548,37 @@ a.link-absolute {
   max-width: 256px;
   margin: 40px auto;
   float: none;
+  text-align: center;
 }
-/* line 108, ../sass/elements/_header.sass */
+/* line 109, ../sass/elements/_header.sass */
 #logo-outer a#logo img {
-  display: block;
+  display: inline-block;
 }
 
-/* line 112, ../sass/elements/_header.sass */
+/* line 113, ../sass/elements/_header.sass */
 .page-node-73 #logo-outer a#logo {
   display: block;
   max-width: 256px;
   margin: 20px auto 40px;
 }
 
-/* line 117, ../sass/elements/_header.sass */
+/* line 118, ../sass/elements/_header.sass */
 .front #header #block-views-top-paragraph-block {
   margin-bottom: 85px;
 }
 
-/* line 119, ../sass/elements/_header.sass */
+/* line 124, ../sass/elements/_header.sass */
+.image-1-top-margin-negative-120 #header #block-views-top-paragraph-block .views-field-field-image img {
+  top: -120px;
+}
+
+/* line 126, ../sass/elements/_header.sass */
 #header #block-views-top-paragraph-block {
   position: relative;
   margin-bottom: 20px;
   z-index: 10;
 }
-/* line 123, ../sass/elements/_header.sass */
+/* line 130, ../sass/elements/_header.sass */
 #header #block-views-top-paragraph-block .views-field-field-image img {
   position: absolute;
   display: block;
@@ -581,7 +588,7 @@ a.link-absolute {
   left: 0;
   top: -45px;
 }
-/* line 131, ../sass/elements/_header.sass */
+/* line 138, ../sass/elements/_header.sass */
 #header #block-views-top-paragraph-block .views-field-field-title {
   position: relative;
   z-index: 2;
@@ -591,26 +598,35 @@ a.link-absolute {
   text-transform: uppercase;
 }
 @media (min-width: 1020px) {
-  /* line 131, ../sass/elements/_header.sass */
+  /* line 138, ../sass/elements/_header.sass */
   #header #block-views-top-paragraph-block .views-field-field-title {
     font-size: 26px;
     line-height: 26px;
   }
 }
 @media (max-width: 767px) {
-  /* line 131, ../sass/elements/_header.sass */
+  /* line 138, ../sass/elements/_header.sass */
   #header #block-views-top-paragraph-block .views-field-field-title {
     font-size: 26px;
     line-height: 26px;
   }
 }
-/* line 144, ../sass/elements/_header.sass */
+/* line 151, ../sass/elements/_header.sass */
 #header #block-views-top-paragraph-block .views-field-field-title h1 {
   margin: 0 0 20px;
   padding: 0;
   color: #fff;
+  font-size: 34px;
+  line-height: 34px;
 }
-/* line 148, ../sass/elements/_header.sass */
+@media (max-width: 767px) {
+  /* line 151, ../sass/elements/_header.sass */
+  #header #block-views-top-paragraph-block .views-field-field-title h1 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+/* line 160, ../sass/elements/_header.sass */
 #header #block-views-top-paragraph-block .views-field-field-body {
   position: relative;
   z-index: 2;
@@ -619,24 +635,24 @@ a.link-absolute {
   text-align: center;
 }
 @media (min-width: 1020px) {
-  /* line 148, ../sass/elements/_header.sass */
+  /* line 160, ../sass/elements/_header.sass */
   #header #block-views-top-paragraph-block .views-field-field-body {
     font-size: 14px;
     line-height: 19px;
   }
 }
 @media (max-width: 767px) {
-  /* line 148, ../sass/elements/_header.sass */
+  /* line 160, ../sass/elements/_header.sass */
   #header #block-views-top-paragraph-block .views-field-field-body {
     font-size: 14px;
     line-height: 19px;
   }
 }
-/* line 160, ../sass/elements/_header.sass */
+/* line 172, ../sass/elements/_header.sass */
 #header #block-views-top-paragraph-block .views-field-field-image-2 {
   position: relative;
 }
-/* line 162, ../sass/elements/_header.sass */
+/* line 174, ../sass/elements/_header.sass */
 #header #block-views-top-paragraph-block .views-field-field-image-2 img {
   position: absolute;
   display: block;
@@ -648,7 +664,7 @@ a.link-absolute {
   pointer-events: none;
 }
 @media (max-width: 767px) {
-  /* line 160, ../sass/elements/_header.sass */
+  /* line 172, ../sass/elements/_header.sass */
   #header #block-views-top-paragraph-block .views-field-field-image-2 {
     display: none;
   }
@@ -950,6 +966,29 @@ a.link-absolute {
   text-indent: -99990px;
 }
 
+/* line 31, ../sass/elements/_paragraphs.sass */
+.paragraphs-item-text-on-image {
+  position: relative;
+}
+/* line 33, ../sass/elements/_paragraphs.sass */
+.paragraphs-item-text-on-image .g3 {
+  position: relative;
+}
+/* line 35, ../sass/elements/_paragraphs.sass */
+.paragraphs-item-text-on-image .field-name-field-background-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  pointer-events: none;
+  display: block;
+}
+/* line 42, ../sass/elements/_paragraphs.sass */
+.paragraphs-item-text-on-image .field-name-field-background-image img {
+  position: relative;
+  z-index: 10;
+}
+
 /* line 2, ../sass/elements/_views.sass */
 .view img {
   display: block;
@@ -1123,7 +1162,7 @@ textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #000;
-  padding-left: 5px;
+  padding-left: 20px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -1131,17 +1170,87 @@ textarea {
 
 /* line 15, ../sass/elements/_forms.sass */
 input.form-text,
-input.form-email {
+input.form-email,
+.block-mailchimp-signup input {
   line-height: 30px;
-  height: 30px;
+  height: 32px;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  /* line 15, ../sass/elements/_forms.sass */
+  input.form-text,
+  input.form-email,
+  .block-mailchimp-signup input {
+    font-size: 18px;
+  }
 }
 
-/* line 19, ../sass/elements/_forms.sass */
+/* line 23, ../sass/elements/_forms.sass */
+textarea {
+  line-height: 30px;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  /* line 23, ../sass/elements/_forms.sass */
+  textarea {
+    font-size: 18px;
+  }
+}
+
+/* line 29, ../sass/elements/_forms.sass */
+input::-webkit-input-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 32, ../sass/elements/_forms.sass */
+input:-moz-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 35, ../sass/elements/_forms.sass */
+input::-moz-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 38, ../sass/elements/_forms.sass */
+input:-ms-input-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 41, ../sass/elements/_forms.sass */
+textarea::-webkit-input-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 44, ../sass/elements/_forms.sass */
+textarea:-moz-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 47, ../sass/elements/_forms.sass */
+textarea::-moz-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 50, ../sass/elements/_forms.sass */
+textarea:-ms-input-placeholder {
+  color: #000 !important;
+  opacity: 1;
+}
+
+/* line 55, ../sass/elements/_forms.sass */
 textarea {
   height: 200px;
 }
 
-/* line 21, ../sass/elements/_forms.sass */
+/* line 57, ../sass/elements/_forms.sass */
 .form-actions {
   text-align: right;
   clear: both;
@@ -1187,11 +1296,11 @@ textarea {
 .form-actions a:hover {
   background: #a70a2c;
 }
-/* line 26, ../sass/elements/_forms.sass */
+/* line 62, ../sass/elements/_forms.sass */
 .form-actions .extra_div {
   display: inline-block;
 }
-/* line 28, ../sass/elements/_forms.sass */
+/* line 64, ../sass/elements/_forms.sass */
 .form-actions .extra_div::after {
   clear: both;
   content: ".";
@@ -1199,7 +1308,7 @@ textarea {
   height: 0;
   visibility: hidden;
 }
-/* line 30, ../sass/elements/_forms.sass */
+/* line 66, ../sass/elements/_forms.sass */
 .form-actions input.form-submit {
   color: #fff;
   display: block;
@@ -1210,66 +1319,56 @@ textarea {
   border: none;
   position: relative;
   z-index: 1;
+  font-size: 22px;
 }
-/* line 40, ../sass/elements/_forms.sass */
+@media (max-width: 767px) {
+  /* line 66, ../sass/elements/_forms.sass */
+  .form-actions input.form-submit {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+/* line 80, ../sass/elements/_forms.sass */
 .form-actions input.form-submit:hover {
   background-color: #333;
 }
 
-/* line 43, ../sass/elements/_forms.sass */
-.aaaa .select-wrapper, .aaaa .form-type-select {
-  width: 100%;
-  background: transparent url("i/select.png") no-repeat right center;
-  overflow: hidden;
-  height: 30px;
+/* line 82, ../sass/elements/_forms.sass */
+input#edit-submit-distributors {
+  color: #fff;
+  display: block;
+  float: right;
   line-height: 30px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
+  padding: 0 0px;
+  height: 30px;
+  width: 100px;
+  background: #000 url("i/szukaj.png") no-repeat center center;
+  border: none;
   position: relative;
   z-index: 1;
-  border: 1px solid #333;
-  -moz-box-shadow: 0 0 1px #fafafa;
-  -webkit-box-shadow: 0 0 1px #fafafa;
-  box-shadow: 0 0 1px #fafafa;
+  text-indent: -9990px;
 }
-/* line 55, ../sass/elements/_forms.sass */
-.aaaa .select-wrapper select, .aaaa .form-type-select select {
-  border: none;
-  background: transparent;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  width: 130%;
-  display: block;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  padding-left: 5px;
-  line-height: 30px;
-  height: 30px;
-  color: #000;
+/* line 95, ../sass/elements/_forms.sass */
+input#edit-submit-distributors:hover {
+  opacity: 0.8;
 }
 
-/* line 69, ../sass/elements/_forms.sass */
+/* line 101, ../sass/elements/_forms.sass */
 .webform-client-form {
   max-width: 560px;
   margin: 40px auto 30px;
 }
 
-/* line 73, ../sass/elements/_forms.sass */
+/* line 105, ../sass/elements/_forms.sass */
 #mailchimp-signup-subscribe-block-signup-form-dutch-form {
   max-width: 560px;
   margin: 40px auto 30px;
 }
-/* line 76, ../sass/elements/_forms.sass */
+/* line 108, ../sass/elements/_forms.sass */
 #mailchimp-signup-subscribe-block-signup-form-dutch-form #edit-actions {
   text-align: right;
 }
-/* line 78, ../sass/elements/_forms.sass */
+/* line 110, ../sass/elements/_forms.sass */
 #mailchimp-signup-subscribe-block-signup-form-dutch-form #edit-actions input {
   background: #000;
   float: right;
@@ -1278,21 +1377,21 @@ textarea {
   border-radius: 0;
   padding: 0 70px;
 }
-/* line 83, ../sass/elements/_forms.sass */
+/* line 115, ../sass/elements/_forms.sass */
 #mailchimp-signup-subscribe-block-signup-form-dutch-form #edit-actions input:hover {
   opacity: 0.75;
 }
 
-/* line 86, ../sass/elements/_forms.sass */
+/* line 118, ../sass/elements/_forms.sass */
 #mc_embed_signup {
   display: none;
 }
-/* line 88, ../sass/elements/_forms.sass */
+/* line 120, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form {
   max-width: 560px;
   margin: 40px auto 30px;
 }
-/* line 91, ../sass/elements/_forms.sass */
+/* line 123, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .mc-field-group {
   clear: left;
   min-height: 30px;
@@ -1300,16 +1399,16 @@ textarea {
   position: relative;
   width: 100%;
 }
-/* line 97, ../sass/elements/_forms.sass */
+/* line 129, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .mc-field-group input {
   border: 2px solid #333;
   margin: 0 0 20px;
 }
-/* line 100, ../sass/elements/_forms.sass */
+/* line 132, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .action-form {
   text-align: right;
 }
-/* line 102, ../sass/elements/_forms.sass */
+/* line 134, ../sass/elements/_forms.sass */
 #mc_embed_signup #mc-embedded-subscribe-form .action-form input#mc-embedded-subscribe.button {
   background: #000;
   float: right;
@@ -1318,7 +1417,7 @@ textarea {
   border-radius: 0;
 }
 
-/* line 110, ../sass/elements/_forms.sass */
+/* line 142, ../sass/elements/_forms.sass */
 .view-id-recipes .ms-options-wrap > .ms-options > ul {
   margin: 0;
   padding: 0;
@@ -1333,14 +1432,57 @@ textarea {
   list-style-type: none;
   list-style-image: none;
 }
-/* line 113, ../sass/elements/_forms.sass */
+/* line 146, ../sass/elements/_forms.sass */
+.view-id-recipes .ms-options-wrap button {
+  background: transparent url("i/recipes-button.png") no-repeat right center;
+  font-family: "Open Sans Condensed";
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 20px;
+}
+/* line 152, ../sass/elements/_forms.sass */
+.view-id-recipes .ms-options-wrap button:after {
+  display: none !important;
+}
+/* line 156, ../sass/elements/_forms.sass */
+.view-id-recipes .ms-options-wrap > .ms-options > ul label {
+  padding: 0 !important;
+}
+/* line 158, ../sass/elements/_forms.sass */
 .view-id-recipes .ms-options-wrap > .ms-options > ul input[type="checkbox"] {
-  left: 0;
+  left: -9990px;
   margin-right: 5px;
   position: absolute;
   top: 12px;
 }
-/* line 118, ../sass/elements/_forms.sass */
+/* line 163, ../sass/elements/_forms.sass */
+.view-id-recipes .ms-options-wrap > .ms-options > ul input[type="checkbox"]:after {
+  position: absolute;
+  lefft: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  z-index: 100;
+  display: block;
+  content: " ";
+}
+/* line 173, ../sass/elements/_forms.sass */
+.view-id-recipes .ms-options-wrap > .ms-options > ul span {
+  display: inline-block;
+  background: transparent url("i/check-out.png") no-repeat scroll left center;
+  cursor: pointer;
+  line-height: 20px;
+  margin: 0 0 0px;
+  padding: 5px 0 5px 30px;
+  font-family: "Open Sans Condensed";
+  font-weight: 300;
+}
+/* line 182, ../sass/elements/_forms.sass */
+.view-id-recipes .ms-options-wrap > .ms-options > ul input:checked + span {
+  background: transparent url("i/check-on.png") no-repeat scroll left center;
+}
+/* line 189, ../sass/elements/_forms.sass */
 .view-id-recipes ul + input,
 .view-id-recipes ul + input + input {
   display: inline-block;
@@ -1360,7 +1502,7 @@ textarea {
   border: none;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
-  /* line 118, ../sass/elements/_forms.sass */
+  /* line 189, ../sass/elements/_forms.sass */
   .view-id-recipes ul + input,
   .view-id-recipes ul + input + input {
     font-size: 17px;
@@ -1368,21 +1510,26 @@ textarea {
   }
 }
 @media (max-width: 767px) {
-  /* line 118, ../sass/elements/_forms.sass */
+  /* line 189, ../sass/elements/_forms.sass */
   .view-id-recipes ul + input,
   .view-id-recipes ul + input + input {
     font-size: 17px;
     line-height: 30px;
   }
 }
-/* line 139, ../sass/elements/_forms.sass */
+/* line 210, ../sass/elements/_forms.sass */
 .view-id-recipes ul + input:hover,
 .view-id-recipes ul + input + input:hover {
   opacity: 0.8;
 }
-/* line 141, ../sass/elements/_forms.sass */
+/* line 212, ../sass/elements/_forms.sass */
 .view-id-recipes #edit-submit-recipes,
 .view-id-recipes #edit-reset {
+  display: none;
+}
+
+/* line 217, ../sass/elements/_forms.sass */
+.block-mailchimp-signup label {
   display: none;
 }
 
@@ -1503,13 +1650,69 @@ textarea {
   display: block;
   padding: 40px 0;
 }
+/* line 73, ../sass/elements/_node-recipe.sass */
+.node-type-recipe .node.node-recipe .group-footer {
+  display: none;
+}
 
-/* line 75, ../sass/elements/_node-recipe.sass */
-.view-id-recipes .views-row {
+/* line 77, ../sass/elements/_node-recipe.sass */
+.view-id-recipes_3_random {
+  padding-top: 40px;
+}
+@media all and (min-width: 860px) {
+  /* line 81, ../sass/elements/_node-recipe.sass */
+  .view-id-recipes_3_random .view-content .views-row:nth-child(1) {
+    margin-top: 50px;
+  }
+  /* line 83, ../sass/elements/_node-recipe.sass */
+  .view-id-recipes_3_random .view-content .views-row:nth-child(2) {
+    margin-top: 100px;
+  }
+}
+/* line 85, ../sass/elements/_node-recipe.sass */
+.view-id-recipes_3_random .view-content:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 87, ../sass/elements/_node-recipe.sass */
+.view-id-recipes_3_random .views-row {
+  width: 33%;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 1%;
+}
+@media all and (min-width: 500px) and (max-width: 859px) {
+  /* line 87, ../sass/elements/_node-recipe.sass */
+  .view-id-recipes_3_random .views-row {
+    width: 50%;
+    float: none;
+  }
+  /* line 95, ../sass/elements/_node-recipe.sass */
+  .view-id-recipes_3_random .views-row:nth-child(3) {
+    display: none;
+  }
+}
+@media all and (min-width: 1px) and (max-width: 499px) {
+  /* line 87, ../sass/elements/_node-recipe.sass */
+  .view-id-recipes_3_random .views-row {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* line 105, ../sass/elements/_node-recipe.sass */
+.view-id-recipes .views-row,
+.view-id-recipes_3_random .views-row {
   position: relative;
 }
-/* line 77, ../sass/elements/_node-recipe.sass */
-.view-id-recipes .views-row h2 {
+/* line 107, ../sass/elements/_node-recipe.sass */
+.view-id-recipes .views-row h2,
+.view-id-recipes_3_random .views-row h2 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1523,8 +1726,9 @@ textarea {
   height: 0;
   overflow: hidden;
 }
-/* line 88, ../sass/elements/_node-recipe.sass */
-.view-id-recipes .views-row a.link-absolute {
+/* line 118, ../sass/elements/_node-recipe.sass */
+.view-id-recipes .views-row a.link-absolute,
+.view-id-recipes_3_random .views-row a.link-absolute {
   position: absolute;
   left: 0;
   top: 0;
@@ -1533,27 +1737,28 @@ textarea {
   z-index: 10;
   text-indent: -9990px;
 }
-/* line 97, ../sass/elements/_node-recipe.sass */
-.view-id-recipes .views-row:hover h2 {
+/* line 127, ../sass/elements/_node-recipe.sass */
+.view-id-recipes .views-row:hover h2,
+.view-id-recipes_3_random .views-row:hover h2 {
   height: auto;
   padding: 50px 40px 80px 40px;
 }
 
-/* line 104, ../sass/elements/_node-recipe.sass */
+/* line 134, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .title-type-Recipe {
   display: none;
 }
-/* line 108, ../sass/elements/_node-recipe.sass */
+/* line 138, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-clipped-image + .views-field-title .title-type-Recipe {
   display: block;
 }
-/* line 110, ../sass/elements/_node-recipe.sass */
+/* line 140, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan {
   padding: 70px 30px 110px;
   position: relative;
   font-size: 24px;
 }
-/* line 114, ../sass/elements/_node-recipe.sass */
+/* line 144, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image {
   display: block;
   position: absolute;
@@ -1562,17 +1767,17 @@ textarea {
   max-width: 30%;
   max-height: 50px;
 }
-/* line 121, ../sass/elements/_node-recipe.sass */
+/* line 151, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image.top {
   right: 0;
   top: 0;
 }
-/* line 124, ../sass/elements/_node-recipe.sass */
+/* line 154, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image.bottom {
   left: 0;
   bottom: 0;
 }
-/* line 127, ../sass/elements/_node-recipe.sass */
+/* line 157, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image.bottom img {
   margin-top: -50px;
 }
@@ -1586,22 +1791,22 @@ textarea {
 .node-type-special-page-type-2 .entity-paragraphs-item .field-item {
   margin-top: 0;
 }
-/* line 9, ../sass/elements/_node_special_2.sass */
+/* line 7, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .node.view-mode-full {
   margin-top: 28px;
   font-size: 18px;
   line-height: 150%;
 }
-/* line 13, ../sass/elements/_node_special_2.sass */
+/* line 11, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .g3 {
   position: relative;
   z-index: 1;
 }
-/* line 16, ../sass/elements/_node_special_2.sass */
+/* line 14, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .g3 .field-items {
   position: relative;
 }
-/* line 18, ../sass/elements/_node_special_2.sass */
+/* line 16, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .g3 .div-table-outer {
   position: absolute;
   left: 0;
@@ -1610,82 +1815,133 @@ textarea {
   height: 100%;
   z-index: 1;
 }
-/* line 25, ../sass/elements/_node_special_2.sass */
+/* line 23, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .g3 .div-table-outer .div-table {
   width: 100%;
 }
-/* line 27, ../sass/elements/_node_special_2.sass */
+/* line 25, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .g3 .div-table-outer .div-table .div-cell {
   padding: 0 40px;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 24px;
 }
-/* line 31, ../sass/elements/_node_special_2.sass */
+@media (min-width: 768px) and (max-width: 1019px) {
+  /* line 25, ../sass/elements/_node_special_2.sass */
+  .node-type-special-page-type-2 .g3 .div-table-outer .div-table .div-cell {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 25, ../sass/elements/_node_special_2.sass */
+  .node-type-special-page-type-2 .g3 .div-table-outer .div-table .div-cell {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+/* line 35, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .g3 .div-table-outer .div-table .div-cell p {
   margin: 0;
 }
-/* line 33, ../sass/elements/_node_special_2.sass */
+/* line 37, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .group-left {
   float: left;
   width: 50%;
 }
-/* line 36, ../sass/elements/_node_special_2.sass */
+/* line 40, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .group-right {
   float: left;
   width: 50%;
   margin-top: 27px;
 }
 @media all and (min-width: 1px) and (max-width: 768px) {
-  /* line 41, ../sass/elements/_node_special_2.sass */
+  /* line 45, ../sass/elements/_node_special_2.sass */
   .node-type-special-page-type-2 .group-left {
     float: none;
     width: 100%;
   }
-  /* line 44, ../sass/elements/_node_special_2.sass */
+  /* line 48, ../sass/elements/_node_special_2.sass */
   .node-type-special-page-type-2 .group-right {
     float: none;
     width: 100%;
     margin-top: -15%;
   }
 }
-/* line 49, ../sass/elements/_node_special_2.sass */
+/* line 53, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .entity-paragraphs-item {
   margin-top: -57px;
 }
-/* line 51, ../sass/elements/_node_special_2.sass */
+/* line 55, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .entity-paragraphs-item.paragraphs-item-intro-text {
   margin: 0;
   padding: 80px 40px 60px;
 }
-/* line 54, ../sass/elements/_node_special_2.sass */
+/* line 58, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .entity-paragraphs-item.paragraphs-item-intro-text h2 {
   font-size: 32px;
   line-height: 120%;
   margin: 0 0 10px;
 }
-/* line 59, ../sass/elements/_node_special_2.sass */
+/* line 63, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .node.view-mode-full h2 {
   font-size: 50px;
   line-height: 120%;
   margin: 0 0 10px;
 }
-/* line 64, ../sass/elements/_node_special_2.sass */
+/* line 68, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .node.view-mode-full.actie h2 {
   color: #a70a2d;
   padding: 50px 0 0 0;
   background: transparent url("i/Arrow.png") no-repeat right top;
 }
-/* line 70, ../sass/elements/_node_special_2.sass */
+/* line 73, ../sass/elements/_node_special_2.sass */
+.node-type-special-page-type-2 .node.view-mode-full.actie .styles-white-font-color {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+  /* line 73, ../sass/elements/_node_special_2.sass */
+  .node-type-special-page-type-2 .node.view-mode-full.actie .styles-white-font-color {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 73, ../sass/elements/_node_special_2.sass */
+  .node-type-special-page-type-2 .node.view-mode-full.actie .styles-white-font-color {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+/* line 82, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .node.view-mode-full.actie .styles-white-font-color h2 {
   color: #fff;
   padding: 0 0 0 0;
   background-image: none;
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0 0 10px;
+  font-weight: 300;
 }
-/* line 75, ../sass/elements/_node_special_2.sass */
+@media (min-width: 768px) and (max-width: 1019px) {
+  /* line 82, ../sass/elements/_node_special_2.sass */
+  .node-type-special-page-type-2 .node.view-mode-full.actie .styles-white-font-color h2 {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 82, ../sass/elements/_node_special_2.sass */
+  .node-type-special-page-type-2 .node.view-mode-full.actie .styles-white-font-color h2 {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+/* line 99, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .group-footer .paragraphs-item-svg-big-alternative {
   position: relative;
 }
-/* line 77, ../sass/elements/_node_special_2.sass */
+/* line 101, ../sass/elements/_node_special_2.sass */
 .node-type-special-page-type-2 .group-footer .paragraphs-item-svg-big-alternative .field-name-field-upper-layer-with-image {
   position: absolute;
   left: 0;
@@ -1696,7 +1952,7 @@ textarea {
   pointer-events: none;
 }
 @media all and (min-width: 1px) and (max-width: 960px) {
-  /* line 77, ../sass/elements/_node_special_2.sass */
+  /* line 101, ../sass/elements/_node_special_2.sass */
   .node-type-special-page-type-2 .group-footer .paragraphs-item-svg-big-alternative .field-name-field-upper-layer-with-image {
     margin-top: -7vw;
   }
@@ -1743,13 +1999,18 @@ textarea {
 /* line 26, ../sass/elements/_pages.sass */
 .page-node-62 #main #content .view-id-distributors .view-filters form #edit-combine-wrapper label {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 34px;
+  font-size: 26px;
 }
-/* line 29, ../sass/elements/_pages.sass */
+/* line 30, ../sass/elements/_pages.sass */
 .page-node-62 #main #content .view-id-distributors .view-filters form #edit-combine-wrapper .views-widget {
   display: inline-block;
 }
-/* line 31, ../sass/elements/_pages.sass */
+/* line 32, ../sass/elements/_pages.sass */
+.page-node-62 #main #content .view-id-distributors .view-filters input#edit-submit-distributors {
+  margin: 0 0 0 30px;
+}
+/* line 35, ../sass/elements/_pages.sass */
 .page-node-62 #main #content .view-id-distributors .view-content {
   margin-left: auto;
   margin-right: auto;
@@ -1758,13 +2019,17 @@ textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 33, ../sass/elements/_pages.sass */
+/* line 37, ../sass/elements/_pages.sass */
 .page-node-62 #main #content .view-id-distributors .view-content table {
   width: 100%;
 }
-/* line 35, ../sass/elements/_pages.sass */
+/* line 39, ../sass/elements/_pages.sass */
 .page-node-62 #main #content .view-id-distributors .view-content table td {
   padding: 0 10px 30px;
+}
+/* line 41, ../sass/elements/_pages.sass */
+.page-node-62 .ajax-progress-throbber {
+  display: none;
 }
 
 /* line 1, ../sass/elements/_front.sass */
@@ -1919,11 +2184,105 @@ textarea {
   vertical-align: middle;
 }
 
-/* line 108, ../sass/elements/_front.sass */
+/* line 100, ../sass/elements/_front.sass */
+.paragraphs-item-svg-small-text-link {
+  position: relative;
+  z-index: 1;
+}
+/* line 103, ../sass/elements/_front.sass */
+.paragraphs-item-svg-small-text-link .field-name-field-text2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  padding: 0 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+  /* line 103, ../sass/elements/_front.sass */
+  .paragraphs-item-svg-small-text-link .field-name-field-text2 {
+    font-size: 14px;
+    line-height: 19px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 103, ../sass/elements/_front.sass */
+  .paragraphs-item-svg-small-text-link .field-name-field-text2 {
+    font-size: 14px;
+    line-height: 19px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+/* line 129, ../sass/elements/_front.sass */
+.paragraphs-item-svg-small-text-link .field-name-field-text2 .div-cell {
+  padding: 0;
+}
+/* line 131, ../sass/elements/_front.sass */
+.paragraphs-item-svg-small-text-link .field-name-field-text2 .field-items {
+  display: table-row;
+}
+/* line 133, ../sass/elements/_front.sass */
+.paragraphs-item-svg-small-text-link .field-name-field-text2 .field-item {
+  display: table-cell;
+  padding: 0 0px;
+  vertical-align: middle;
+}
+/* line 137, ../sass/elements/_front.sass */
+.paragraphs-item-svg-small-text-link .field-name-field-text2 h2 {
+  font-size: 67px;
+  line-height: 67px;
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0 0 10px;
+  font-weight: 300;
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+  /* line 137, ../sass/elements/_front.sass */
+  .paragraphs-item-svg-small-text-link .field-name-field-text2 h2 {
+    font-size: 36px;
+    line-height: 36px;
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 137, ../sass/elements/_front.sass */
+  .paragraphs-item-svg-small-text-link .field-name-field-text2 h2 {
+    font-size: 36px;
+    line-height: 36px;
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+/* line 155, ../sass/elements/_front.sass */
+.paragraphs-item-svg-small-text-link .field-name-field-link-to-node a {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  text-indent: -9999px;
+}
+
+/* line 176, ../sass/elements/_front.sass */
 .node-type-front-page .node-front-page.view-mode-full {
   margin-top: -80px;
 }
-/* line 116, ../sass/elements/_front.sass */
+/* line 184, ../sass/elements/_front.sass */
 .node-type-front-page .group-header::after {
   clear: both;
   content: ".";
@@ -1931,24 +2290,24 @@ textarea {
   height: 0;
   visibility: hidden;
 }
-/* line 118, ../sass/elements/_front.sass */
+/* line 186, ../sass/elements/_front.sass */
 .node-type-front-page .group-header .gg > div {
   margin-top: 0;
   margin-top: -50px;
 }
 @media all and (min-width: 468px) and (max-width: 980px) {
-  /* line 118, ../sass/elements/_front.sass */
+  /* line 186, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .gg > div {
     margin-top: -5vw;
   }
 }
 @media all and (min-width: 1px) and (max-width: 467px) {
-  /* line 118, ../sass/elements/_front.sass */
+  /* line 186, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .gg > div {
     margin-top: -14vw;
   }
 }
-/* line 125, ../sass/elements/_front.sass */
+/* line 193, ../sass/elements/_front.sass */
 .node-type-front-page .group-header .g1 {
   margin-top: 120px;
   width: 32%;
@@ -1956,7 +2315,7 @@ textarea {
   margin-right: 1%;
 }
 @media all and (min-width: 468px) and (max-width: 767px) {
-  /* line 125, ../sass/elements/_front.sass */
+  /* line 193, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g1 {
     margin-top: 120px;
     width: 49%;
@@ -1965,7 +2324,7 @@ textarea {
   }
 }
 @media all and (min-width: 1px) and (max-width: 467px) {
-  /* line 125, ../sass/elements/_front.sass */
+  /* line 193, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g1 {
     float: none;
     margin: 0 0 0 0;
@@ -1973,7 +2332,7 @@ textarea {
     clear: both;
   }
 }
-/* line 144, ../sass/elements/_front.sass */
+/* line 212, ../sass/elements/_front.sass */
 .node-type-front-page .group-header .g2 {
   width: 32%;
   float: left;
@@ -1981,7 +2340,7 @@ textarea {
   margin-top: 240px;
 }
 @media all and (min-width: 468px) and (max-width: 767px) {
-  /* line 144, ../sass/elements/_front.sass */
+  /* line 212, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g2 {
     margin-top: 160px;
     width: 49%;
@@ -1989,7 +2348,7 @@ textarea {
     margin-left: 1%;
     margin-right: 0;
   }
-  /* line 161, ../sass/elements/_front.sass */
+  /* line 229, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g2 .field-type-paragraphs > .field-items > .field-item {
     float: left;
     width: 49%;
@@ -1997,7 +2356,7 @@ textarea {
   }
 }
 @media all and (min-width: 1px) and (max-width: 467px) {
-  /* line 144, ../sass/elements/_front.sass */
+  /* line 212, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g2 {
     float: none;
     margin: 0 0 0 0;
@@ -2005,45 +2364,45 @@ textarea {
     clear: both;
   }
 }
-/* line 170, ../sass/elements/_front.sass */
+/* line 238, ../sass/elements/_front.sass */
 .node-type-front-page .group-header .g3 {
   width: 33%;
   float: left;
   color: #000;
 }
-/* line 174, ../sass/elements/_front.sass */
+/* line 242, ../sass/elements/_front.sass */
 .node-type-front-page .group-header .g3 .field-name-field-front-h3 {
   padding: 80px 40px 40px;
 }
 @media all and (min-width: 468px) and (max-width: 767px) {
-  /* line 170, ../sass/elements/_front.sass */
+  /* line 238, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g3 {
     float: none;
     margin: 0 0 0 0;
     width: 100%;
     clear: both;
   }
-  /* line 181, ../sass/elements/_front.sass */
+  /* line 249, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g3 > div:nth-child(1) {
     width: 49%;
     float: left;
     margin-right: 1%;
     margin-top: -11vw;
   }
-  /* line 186, ../sass/elements/_front.sass */
+  /* line 254, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g3 > div:nth-child(2) {
     float: left;
     margin-left: 1%;
     width: 49%;
     padding-bottom: 30px;
   }
-  /* line 191, ../sass/elements/_front.sass */
+  /* line 259, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g3 > div:nth-child(2) a.ebutton {
     min-width: auto;
   }
 }
 @media all and (min-width: 1px) and (max-width: 467px) {
-  /* line 170, ../sass/elements/_front.sass */
+  /* line 238, ../sass/elements/_front.sass */
   .node-type-front-page .group-header .g3 {
     float: none;
     margin: 0 0 0 0;
@@ -2051,30 +2410,30 @@ textarea {
     clear: both;
   }
 }
-/* line 198, ../sass/elements/_front.sass */
+/* line 266, ../sass/elements/_front.sass */
 .node-type-front-page .l-r {
   margin-right: 1%;
   clear: both;
   position: relative;
 }
-/* line 202, ../sass/elements/_front.sass */
+/* line 270, ../sass/elements/_front.sass */
 .node-type-front-page .l-r .group-left {
   position: relative;
   z-index: 1;
 }
-/* line 205, ../sass/elements/_front.sass */
+/* line 273, ../sass/elements/_front.sass */
 .node-type-front-page .l-r .group-left svg {
   margin-top: -88px;
   position: relative;
   z-index: 10;
 }
 @media all and (min-width: 1px) and (max-width: 1000px) {
-  /* line 205, ../sass/elements/_front.sass */
+  /* line 273, ../sass/elements/_front.sass */
   .node-type-front-page .l-r .group-left svg {
     margin-top: -10vw;
   }
 }
-/* line 211, ../sass/elements/_front.sass */
+/* line 279, ../sass/elements/_front.sass */
 .node-type-front-page .l-r .group-right {
   position: absolute;
   width: 32%;
@@ -2083,23 +2442,23 @@ textarea {
   left: 0;
   z-index: 10;
 }
-/* line 218, ../sass/elements/_front.sass */
+/* line 286, ../sass/elements/_front.sass */
 .node-type-front-page .l-r .group-right .paragraphs-item-intro-text {
   padding: 60px 40px 60px;
   background: transparent url("i/w75.png") right top no-repeat;
 }
-/* line 221, ../sass/elements/_front.sass */
+/* line 289, ../sass/elements/_front.sass */
 .node-type-front-page .l-r .group-right .paragraphs-item-svg-small {
   margin-top: -60px;
 }
 @media all and (min-width: 768px) and (max-width: 960px) {
-  /* line 211, ../sass/elements/_front.sass */
+  /* line 279, ../sass/elements/_front.sass */
   .node-type-front-page .l-r .group-right {
     margin-top: 15vw;
   }
 }
 @media all and (min-width: 468px) and (max-width: 767px) {
-  /* line 211, ../sass/elements/_front.sass */
+  /* line 279, ../sass/elements/_front.sass */
   .node-type-front-page .l-r .group-right {
     width: 100%;
     margin-top: 0;
@@ -2107,56 +2466,55 @@ textarea {
   }
 }
 @media all and (min-width: 1px) and (max-width: 467px) {
-  /* line 211, ../sass/elements/_front.sass */
+  /* line 279, ../sass/elements/_front.sass */
   .node-type-front-page .l-r .group-right {
     width: 100%;
     margin-top: 0;
     position: relative;
   }
 }
-/* line 234, ../sass/elements/_front.sass */
+/* line 302, ../sass/elements/_front.sass */
 .node-type-front-page .group-footer svg {
-  margin-top: -110px;
-  margin-top: 75px;
+  margin-top: -150px;
   position: relative;
   z-index: 10;
 }
 @media all and (min-width: 1px) and (max-width: 1000px) {
-  /* line 234, ../sass/elements/_front.sass */
+  /* line 302, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer svg {
     margin-top: -10vw;
   }
 }
 @media all and (min-width: 1px) and (max-width: 767px) {
-  /* line 234, ../sass/elements/_front.sass */
+  /* line 302, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer svg {
     margin-top: 0vw;
   }
 }
-/* line 244, ../sass/elements/_front.sass */
+/* line 311, ../sass/elements/_front.sass */
 .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items {
   position: relative;
   z-index: 1;
 }
-/* line 247, ../sass/elements/_front.sass */
+/* line 314, ../sass/elements/_front.sass */
 .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(1) {
   position: relative;
   z-index: 1;
   margin-top: -40px;
 }
 @media all and (min-width: 468px) and (max-width: 860px) {
-  /* line 247, ../sass/elements/_front.sass */
+  /* line 314, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(1) {
     margin-top: -5%;
   }
 }
 @media all and (min-width: 1px) and (max-width: 467px) {
-  /* line 247, ../sass/elements/_front.sass */
+  /* line 314, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(1) {
     margin-top: -5%;
   }
 }
-/* line 255, ../sass/elements/_front.sass */
+/* line 322, ../sass/elements/_front.sass */
 .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(2) {
   width: 32%;
   position: absolute;
@@ -2170,21 +2528,21 @@ textarea {
   z-index: 2;
 }
 @media all and (min-width: 768px) and (max-width: 1000px) {
-  /* line 255, ../sass/elements/_front.sass */
+  /* line 322, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(2) {
     width: 50%;
     bottom: 18vw;
   }
 }
 @media all and (min-width: 660px) and (max-width: 767px) {
-  /* line 255, ../sass/elements/_front.sass */
+  /* line 322, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(2) {
     width: 50%;
     bottom: 18vw;
   }
 }
 @media all and (min-width: 1px) and (max-width: 659px) {
-  /* line 255, ../sass/elements/_front.sass */
+  /* line 322, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(2) {
     width: 100%;
     padding: 0;
@@ -2194,11 +2552,11 @@ textarea {
   }
 }
 
-/* line 278, ../sass/elements/_front.sass */
+/* line 345, ../sass/elements/_front.sass */
 .node-type-front-page .field-type-viewreference {
   position: relative;
 }
-/* line 280, ../sass/elements/_front.sass */
+/* line 347, ../sass/elements/_front.sass */
 .node-type-front-page .field-type-viewreference .views-field-title {
   position: absolute;
   left: 0;
@@ -2216,16 +2574,16 @@ textarea {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-/* line 292, ../sass/elements/_front.sass */
+/* line 359, ../sass/elements/_front.sass */
 .node-type-front-page .field-type-viewreference .views-field-title a {
   text-decoration: none;
 }
-/* line 294, ../sass/elements/_front.sass */
+/* line 361, ../sass/elements/_front.sass */
 .node-type-front-page .field-type-viewreference .views-field-title h2 {
   padding: 30px 40px 60px 40px;
   color: #333;
 }
-/* line 298, ../sass/elements/_front.sass */
+/* line 365, ../sass/elements/_front.sass */
 .node-type-front-page .field-type-viewreference:hover .views-field-title {
   height: auto;
 }
@@ -2246,119 +2604,76 @@ textarea {
 .page-node-70 #footer-dark .region-footerblack {
   background: rgba(0, 0, 0, 0.25) none repeat scroll 0 0;
 }
-/* line 11, ../sass/elements/pages/_la_belle_flamande.sass */
-.page-node-70 #content {
-  z-index: 1;
-}
-/* line 13, ../sass/elements/pages/_la_belle_flamande.sass */
-.page-node-70 #content:after {
-  position: absolute;
-  display: block;
-  content: " ";
-  width: 100%;
-  height: 340px;
-  background: transparent url("i/p70-1.png") no-repeat center top/contain;
-  z-index: 2;
-  left: -1%;
-  top: -260px;
-}
-@media all and (min-width: 1px) and (max-width: 780px) {
-  /* line 13, ../sass/elements/pages/_la_belle_flamande.sass */
-  .page-node-70 #content:after {
-    display: none;
-  }
-}
 
-/* line 27, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 12, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full {
   color: #000;
 }
-/* line 29, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 14, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full img {
   max-width: 100% !important;
   height: auto;
   display: inline-block;
 }
-/* line 33, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 18, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full .group-left {
   float: left;
   width: 50%;
 }
-/* line 36, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 21, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full .group-right {
   float: left;
   width: 50%;
 }
 @media all and (min-width: 1px) and (max-width: 768px) {
-  /* line 40, ../sass/elements/pages/_la_belle_flamande.sass */
+  /* line 25, ../sass/elements/pages/_la_belle_flamande.sass */
   .page-node-70 .node-special-page-type-2.view-mode-full .group-left {
     float: none;
     width: 100%;
     margin-top: -80px;
   }
-  /* line 44, ../sass/elements/pages/_la_belle_flamande.sass */
+  /* line 29, ../sass/elements/pages/_la_belle_flamande.sass */
   .page-node-70 .node-special-page-type-2.view-mode-full .group-right {
     float: none;
     width: 100%;
     margin-top: -15%;
   }
 }
-/* line 49, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 34, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph {
   color: #000;
 }
-/* line 51, ../sass/elements/pages/_la_belle_flamande.sass */
-.page-node-70 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph .field-item:nth-child(2) {
-  position: relative;
-  z-index: 1;
-}
-/* line 54, ../sass/elements/pages/_la_belle_flamande.sass */
-.page-node-70 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph .field-item:nth-child(2):after {
-  display: block;
-  position: absolute;
-  content: " ";
-  width: 170px;
-  height: 140px;
-  right: 10px;
-  top: 10px;
-  z-index: 10;
-  background: transparent url("i/p70.png") no-repeat center center/contain;
-}
-/* line 64, ../sass/elements/pages/_la_belle_flamande.sass */
-.page-node-70 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph .field-item:nth-child(2) img {
-  margin-top: 25px;
-}
-/* line 69, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 40, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full .group-right .field-name-field-right-column-paragraph .field-item:nth-child(1) img {
   margin-top: 20px;
 }
-/* line 71, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 42, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full .group-right .field-name-field-right-column-paragraph .field-item:nth-child(3) {
   color: #fff;
 }
-/* line 73, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 44, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-special-page-type-2.view-mode-full .group-footer {
   margin-top: -300px;
   position: relative;
   z-index: 0;
 }
 @media all and (min-width: 1px) and (max-width: 960px) {
-  /* line 73, ../sass/elements/pages/_la_belle_flamande.sass */
+  /* line 44, ../sass/elements/pages/_la_belle_flamande.sass */
   .page-node-70 .node-special-page-type-2.view-mode-full .group-footer {
     margin-top: -35vw;
   }
 }
 
-/* line 81, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 52, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 {
   position: relative;
   z-index: 1;
 }
-/* line 84, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 55, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 .field-items {
   position: relative;
 }
-/* line 86, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 57, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 .div-table-outer {
   position: absolute;
   left: 0;
@@ -2367,38 +2682,38 @@ textarea {
   height: 100%;
   z-index: 1;
 }
-/* line 93, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 64, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 .div-table-outer .div-table {
   width: 100%;
 }
-/* line 95, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 66, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 .div-table-outer .div-table .div-cell {
   padding: 0 40px;
   font-size: 20px;
   line-height: 120%;
 }
-/* line 99, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 70, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 .div-table-outer .div-table .div-cell .field-item {
   max-width: 410px;
 }
 @media all and (min-width: 1px) and (max-width: 1060px) {
-  /* line 99, ../sass/elements/pages/_la_belle_flamande.sass */
+  /* line 70, ../sass/elements/pages/_la_belle_flamande.sass */
   .page-node-70 .g3 .div-table-outer .div-table .div-cell .field-item {
     max-width: 88vw;
   }
 }
-/* line 103, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 74, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 .div-table-outer .div-table .div-cell h2 {
   font-size: 50px;
   line-height: 120%;
   margin: 0 0 10px;
 }
-/* line 107, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 78, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .g3 .div-table-outer .div-table .div-cell p {
   margin: 0;
 }
 
-/* line 112, ../sass/elements/pages/_la_belle_flamande.sass */
+/* line 83, ../sass/elements/pages/_la_belle_flamande.sass */
 .page-node-70 .node-type-special-page-type-2 .g3 .div-table-outer .div-table .div-cell .field-item {
   max-width: 90vw;
 }
@@ -2473,73 +2788,50 @@ textarea {
 .page-node-73 .node-special-page-type-2.view-mode-full {
   margin-top: -28px;
 }
-/* line 20, ../sass/elements/pages/_chandelier.sass */
-.page-node-73 #content {
-  z-index: 1;
-}
-/* line 22, ../sass/elements/pages/_chandelier.sass */
-.page-node-73 #content:after {
-  pointer-events: none;
-  position: absolute;
-  display: block;
-  content: " ";
-  width: 100%;
-  height: 340px;
-  background: transparent url("i/p70-1.png") no-repeat center top/contain;
-  z-index: 2;
-  left: -1%;
-  top: -260px;
-}
-@media all and (min-width: 1px) and (max-width: 780px) {
-  /* line 22, ../sass/elements/pages/_chandelier.sass */
-  .page-node-73 #content:after {
-    display: none;
-  }
-}
 
-/* line 37, ../sass/elements/pages/_chandelier.sass */
+/* line 16, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full {
   color: #000;
 }
-/* line 39, ../sass/elements/pages/_chandelier.sass */
+/* line 18, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full img {
   max-width: 100% !important;
   height: auto;
   display: inline-block;
 }
-/* line 43, ../sass/elements/pages/_chandelier.sass */
+/* line 22, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-left {
   float: left;
   width: 50%;
 }
-/* line 46, ../sass/elements/pages/_chandelier.sass */
+/* line 25, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-right {
   float: left;
   width: 50%;
 }
 @media all and (min-width: 1px) and (max-width: 768px) {
-  /* line 50, ../sass/elements/pages/_chandelier.sass */
+  /* line 29, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-left {
     float: none;
     width: 100%;
   }
-  /* line 53, ../sass/elements/pages/_chandelier.sass */
+  /* line 32, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-right {
     float: none;
     width: 100%;
     margin-top: -15%;
   }
 }
-/* line 58, ../sass/elements/pages/_chandelier.sass */
+/* line 37, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph {
   color: #000;
 }
-/* line 60, ../sass/elements/pages/_chandelier.sass */
+/* line 39, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph .field-item:nth-child(2) {
   position: relative;
   z-index: 1;
 }
-/* line 63, ../sass/elements/pages/_chandelier.sass */
+/* line 42, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph .field-item:nth-child(2):after {
   display: block;
   position: absolute;
@@ -2549,35 +2841,34 @@ textarea {
   right: 10px;
   top: 10px;
   z-index: 10;
-  background: transparent url("i/p70.png") no-repeat center center/contain;
 }
-/* line 73, ../sass/elements/pages/_chandelier.sass */
+/* line 52, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph .field-item:nth-child(2) img {
   max-width: 300px !important;
   margin-top: 25px;
 }
 @media all and (min-width: 1px) and (max-width: 768px) {
-  /* line 73, ../sass/elements/pages/_chandelier.sass */
+  /* line 52, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-left .field-name-field-left-column-paragraph .field-item:nth-child(2) img {
     max-width: 300px;
   }
 }
-/* line 83, ../sass/elements/pages/_chandelier.sass */
+/* line 62, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-right .field-name-field-right-column-paragraph .field-item:nth-child(1) img {
   max-width: 180px !important;
   margin-top: 25px;
 }
 @media all and (min-width: 1px) and (max-width: 768px) {
-  /* line 83, ../sass/elements/pages/_chandelier.sass */
+  /* line 62, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-right .field-name-field-right-column-paragraph .field-item:nth-child(1) img {
     max-width: 140px;
   }
 }
-/* line 88, ../sass/elements/pages/_chandelier.sass */
+/* line 67, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-right .field-name-field-right-column-paragraph .field-item:nth-child(3) {
   color: #fff;
 }
-/* line 91, ../sass/elements/pages/_chandelier.sass */
+/* line 70, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-footer .field-name-field-clipped-image-big svg,
 .page-node-73 .node-special-page-type-2.view-mode-full .group-footer .field-name-field-clipped-image-big-alternat svg {
   margin-top: -100px;
@@ -2585,23 +2876,23 @@ textarea {
   z-index: 0;
 }
 @media all and (min-width: 1px) and (max-width: 960px) {
-  /* line 91, ../sass/elements/pages/_chandelier.sass */
+  /* line 70, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-footer .field-name-field-clipped-image-big svg,
   .page-node-73 .node-special-page-type-2.view-mode-full .group-footer .field-name-field-clipped-image-big-alternat svg {
     margin-top: -7vw;
   }
 }
 
-/* line 99, ../sass/elements/pages/_chandelier.sass */
+/* line 78, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 {
   position: relative;
   z-index: 1;
 }
-/* line 102, ../sass/elements/pages/_chandelier.sass */
+/* line 81, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 .field-items {
   position: relative;
 }
-/* line 104, ../sass/elements/pages/_chandelier.sass */
+/* line 83, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 .div-table-outer {
   position: absolute;
   left: 0;
@@ -2610,73 +2901,73 @@ textarea {
   height: 100%;
   z-index: 1;
 }
-/* line 111, ../sass/elements/pages/_chandelier.sass */
+/* line 90, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 .div-table-outer .div-table {
   width: 100%;
 }
-/* line 113, ../sass/elements/pages/_chandelier.sass */
+/* line 92, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 .div-table-outer .div-table .div-cell {
   padding: 0 40px;
   font-size: 20px;
   line-height: 120%;
 }
-/* line 117, ../sass/elements/pages/_chandelier.sass */
+/* line 96, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 .div-table-outer .div-table .div-cell .field-item {
   max-width: 410px;
 }
 @media all and (min-width: 1px) and (max-width: 1060px) {
-  /* line 117, ../sass/elements/pages/_chandelier.sass */
+  /* line 96, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .g3 .div-table-outer .div-table .div-cell .field-item {
     max-width: 88vw;
   }
 }
-/* line 121, ../sass/elements/pages/_chandelier.sass */
+/* line 100, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 .div-table-outer .div-table .div-cell h2 {
   font-size: 50px;
   line-height: 120%;
   margin: 0 0 10px;
 }
-/* line 125, ../sass/elements/pages/_chandelier.sass */
+/* line 104, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .g3 .div-table-outer .div-table .div-cell p {
   margin: 0;
 }
 
-/* line 130, ../sass/elements/pages/_chandelier.sass */
+/* line 109, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-type-special-page-type-2 .g3 .div-table-outer .div-table .div-cell .field-item {
   max-width: 90vw;
 }
 
-/* line 135, ../sass/elements/pages/_chandelier.sass */
+/* line 114, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-left {
   float: left;
   width: 50%;
 }
-/* line 138, ../sass/elements/pages/_chandelier.sass */
+/* line 117, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-right {
   float: left;
   width: 50%;
   margin-top: 86px;
 }
 @media all and (min-width: 1px) and (max-width: 768px) {
-  /* line 143, ../sass/elements/pages/_chandelier.sass */
+  /* line 122, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-left {
     float: none;
     width: 100%;
   }
-  /* line 146, ../sass/elements/pages/_chandelier.sass */
+  /* line 125, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-right {
     float: none;
     width: 100%;
     margin-top: -15%;
   }
 }
-/* line 151, ../sass/elements/pages/_chandelier.sass */
+/* line 130, ../sass/elements/pages/_chandelier.sass */
 .page-node-73 .node-special-page-type-2.view-mode-full .group-footer .field-name-field-clipped-image-big svg {
   position: relative;
   z-index: 0;
 }
 @media all and (min-width: 1px) and (max-width: 960px) {
-  /* line 151, ../sass/elements/pages/_chandelier.sass */
+  /* line 130, ../sass/elements/pages/_chandelier.sass */
   .page-node-73 .node-special-page-type-2.view-mode-full .group-footer .field-name-field-clipped-image-big svg {
     margin-top: 0vw;
   }

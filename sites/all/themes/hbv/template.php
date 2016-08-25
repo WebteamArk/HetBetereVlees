@@ -130,3 +130,16 @@ function hbv_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter()
+ */
+function hbv_form_mailchimp_signup_subscribe_block_signup_form_dutch_form_alter(&$form, &$form_state, $form_id) {
+  //drupal_set_message('<xmp><code>'.var_export($form, true).'</code></xmp>');
+  $form['mergevars']['EMAIL']['#attributes'] = array('placeholder' => 'e-mail');
+  $form['mergevars']['EMAIL']['#weight'] = 3;
+  $form['mergevars']['FNAME']['#attributes'] = array('placeholder' => 'naam');
+  $form['mergevars']['FNAME']['#weight'] = 1;
+  $form['mergevars']['LNAME']['#attributes'] = array('placeholder' => 'voornaam');
+  $form['mergevars']['LNAME']['#weight'] = 2;
+}

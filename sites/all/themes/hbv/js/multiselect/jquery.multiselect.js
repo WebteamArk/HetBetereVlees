@@ -484,7 +484,7 @@
 
         // Add option to the custom dom list
         _addOption: function( container, option ) {
-            container.text( option.name );
+            container.html( '<span>' + option.name + '</span>');
             container.prepend(
                 $('<input type="checkbox" value="" title="" />')
                     .val( option.value )

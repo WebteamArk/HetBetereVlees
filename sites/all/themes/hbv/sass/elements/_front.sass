@@ -97,6 +97,74 @@
       padding: 0 40px
       vertical-align: middle
 
+.paragraphs-item-svg-small-text-link
+  position: relative
+  z-index: 1
+  .field-name-field-text2
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    color: #fff
+    font-size: 24px
+    line-height: 28px
+    font-size: 20px
+    line-height: 24px
+    text-align: left
+    padding: 0 40px
+    +box-sizing(border-box)
+    // font-family: Open Sans Condensed
+    // font-weight: 700
+    @include breakpoint($t)
+      font-size: 14px
+      line-height: 19px
+      font-size: 18px
+      line-height: 22px
+    @include breakpoint($m)
+      font-size: 14px
+      line-height: 19px
+      font-size: 18px
+      line-height: 22px
+    .div-cell
+      padding: 0
+    .field-items
+      display: table-row
+    .field-item
+      display: table-cell
+      padding: 0 0px
+      vertical-align: middle
+    h2
+      font-size: 67px
+      line-height: 67px
+      font-size: 60px
+      line-height: 60px
+      margin: 0 0 10px
+      font-weight: 300
+      @include breakpoint($t)
+        font-size: 36px
+        line-height: 36px
+        font-size: 44px
+        line-height: 44px
+      @include breakpoint($m)
+        font-size: 36px
+        line-height: 36px
+        font-size: 44px
+        line-height: 44px
+  .field-name-field-link-to-node
+    a
+      position: absolute
+      display: block
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 10
+      text-indent: -9999px
+
+
+
+
 // .paragraphs-item-svg-small-text
 //   .field-name-field-body
 //     .field-items
@@ -232,8 +300,7 @@
         position: relative
   .group-footer
     svg
-      margin-top: -110px
-      margin-top: 75px
+      margin-top: -150px
       position: relative
       z-index: 10
       @media all and (min-width: 1px) and (max-width: 1000px)

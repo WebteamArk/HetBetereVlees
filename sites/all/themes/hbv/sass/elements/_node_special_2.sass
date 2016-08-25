@@ -4,8 +4,6 @@
     padding: 0 0px
     .field-item
       margin-top: 0
-
-
   .node.view-mode-full
     margin-top: 28px
     font-size: 18px
@@ -27,7 +25,13 @@
         .div-cell
           padding: 0 40px
           font-size: 20px
-          line-height: 120%
+          line-height: 24px
+          @include breakpoint($t)
+            font-size: 18px
+            line-height: 22px
+          @include breakpoint($m)
+            font-size: 18px
+            line-height: 22px
           p
             margin: 0
   .group-left
@@ -67,10 +71,30 @@
       background: transparent url('i/Arrow.png') no-repeat right top
   .node.view-mode-full.actie
     .styles-white-font-color
+      font-size: 20px
+      line-height: 24px
+      @include breakpoint($t)
+        font-size: 18px
+        line-height: 22px
+      @include breakpoint($m)
+        font-size: 18px
+        line-height: 22px
       h2
         color: #fff
         padding: 0 0 0 0
         background-image: none
+        font-size: 60px
+        line-height: 60px
+        margin: 0 0 10px
+        font-weight: 300
+        @include breakpoint($t)
+          font-size: 44px
+          line-height: 44px
+        @include breakpoint($m)
+          font-size: 44px
+          line-height: 44px
+
+
   .group-footer
     .paragraphs-item-svg-big-alternative
       position: relative
