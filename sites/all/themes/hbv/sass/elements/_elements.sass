@@ -29,14 +29,20 @@ h2
   font-weight: 300
   font-size: 22px
   line-height: 22px
+  font-size: 34px
+  line-height: 34px
   text-transform: uppercase
   +box-sizing(border-box)
   @include breakpoint($t)
     font-size: 22px
     line-height: 22px
+    font-size: 26px
+    line-height: 26px
   @include breakpoint($m)
     font-size: 17px
     line-height: 20px
+    font-size: 26px
+    line-height: 26px
   .h2-big &
     font-size: 34px
     line-height: 34px
@@ -46,6 +52,20 @@ h2
     @include breakpoint($m)
       font-size: 26px
       line-height: 26px
+h3
+  font-weight: 300
+  font-size: 22px
+  line-height: 22px
+  text-transform: uppercase
+  +box-sizing(border-box)
+  @include breakpoint($t)
+    font-size: 22px
+    line-height: 22px
+  @include breakpoint($m)
+    font-size: 17px
+    line-height: 17px
+
+
 .position-center
   @include limiter
 .styles-align-center
@@ -158,3 +178,15 @@ a.link-absolute
     display: block
   a.ebutton.elang.fr
     display: inline-blocks
+.node:not(.no-animation)
+  .come-in
+    transform: translateY(150px)
+    animation: come-in 1.2s ease forwards
+  .come-in:nth-child(odd)
+    animation-duration: 1.0s
+  .already-visible
+    transform: translateY(0)
+    animation: none
+  @keyframes come-in
+    to
+      transform: translateY(0)

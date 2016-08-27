@@ -180,6 +180,59 @@ Drupal.behaviors.hbvMultiselect = {
   },
 };
 
+Drupal.behaviors.hbvAnimateObjects = {
+  attach: function(context, settings) {
+    $('.view-id-recipes .views-row', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '100%', triggerOnce: true});
+    });
+    $('.view-recipe-to-front .views-row', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '100%', triggerOnce: true});
+    });
+    $('.paragraphs-items-field-front-h1', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '100%', triggerOnce: true});
+    });
+    $('.paragraphs-items-field-front-h3', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '100%', triggerOnce: true});
+    });
+    $('.paragraphs-items-field-front-m1', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '105%', triggerOnce: true});
+    });
+    $('.paragraphs-items-field-front-f1', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '105%', triggerOnce: true});
+    });
+    $('.paragraphs-items > .field > .field-items > .field-item', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '105%', triggerOnce: true});
+    });
+    $('.field-name-field-clipped-image-big-alternat', context).once('npx-animate-objects').each(function() {
+      $(this).waypoint(function(event, direction) {
+        $(this).addClass('come-in');
+      }, 
+      { offset: '105%', triggerOnce: true});
+    });
+  },
+};
+
 Drupal.behaviors.hbvAnimateAssets = {
   attach: function(context, settings) {
     var duration = 500;
