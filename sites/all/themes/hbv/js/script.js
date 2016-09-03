@@ -4,6 +4,7 @@
  *
  * In order for this JavaScript to be loaded on pages, see the instructions in
  * the README.txt next to this file.
+ * @author Jacek Szmit
  */
 
 // JavaScript should be made compatible with libraries other than jQuery by
@@ -17,14 +18,6 @@ Drupal.behaviors.hbvImages = {
   attach: function(context, settings) {
     $('.npx-image', context).once('hbv-images').each(function() {
       Drupal.behaviors.hbvImages.calculateMargin(this);
-//      var defaultMultiplier = -16;
-//      var height = $(this).height();
-//      var multiplier = defaultMultiplier;
-//      if($(this).attr('data-topmargin')) {
-//        multiplier = parseInt($(this).attr('data-topmargin'), 10);
-//      }
-//      var margin = Math.ceil(height * (multiplier / 100));
-//      $(this).css('margin-top', margin);
     });
   },
   calculateMargin: function(elem) {
@@ -65,20 +58,6 @@ Drupal.behaviors.hbvHeightCalc = {
     $(elem).css('height', Math.ceil(height));
   }
 };
-
-/*
-Drupal.behaviors.hbvForceFocus = {
-  attach: function(context, settings) {
-    $('#views-exposed-form-distributors-block #edit-combine', context).once('npx-force-focus').each(function() {
-      //$(this).focus();
-      $(this).keypress(function(event){
-        if (event.keyCode === 10 || event.keyCode === 13) 
-          event.preventDefault();
-      });
-    });
-  },
-};
-*/
 
 Drupal.behaviors.hbvMultiselect = {
   attach: function(context, settings) {
@@ -183,105 +162,184 @@ Drupal.behaviors.hbvMultiselect = {
 Drupal.behaviors.hbvAnimateObjects = {
   attach: function(context, settings) {
     $('.view-id-recipes .views-row', context).once('npx-animate-objects').each(function() {
+      $(this).fadeTo(0, 0);
       $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
+        var $parentColumn = $(this).closest('div.views-column');
+        if($parentColumn.hasClass('views-column-2')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 500);
+        }
+        else if($parentColumn.hasClass('views-column-3')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 1000);
+        }
+        else {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
+        }
+      }, 
+      { offset: '100%', triggerOnce: true});
+    });
+    $('.view-distributors .views-row', context).once('npx-animate-objects').each(function() {
+      $(this).fadeTo(0, 0);
+      $(this).waypoint(function(event, direction) {
+        var $parentColumn = $(this).closest('div.views-column');
+        if($parentColumn.hasClass('views-column-2')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 500);
+        }
+        else if($parentColumn.hasClass('views-column-3')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 1000);
+        }
+        else if($parentColumn.hasClass('views-column-4')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 1500);
+        }
+        else {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
+        }
       }, 
       { offset: '100%', triggerOnce: true});
     });
     $('.view-recipe-to-front .views-row', context).once('npx-animate-objects').each(function() {
+      $(this).fadeTo(0, 0);
       $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
+        var $parentColumn = $(this).closest('div.views-column');
+        if($parentColumn.hasClass('views-column-2')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 500);
+        }
+        else if($parentColumn.hasClass('views-column-3')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 1000);
+        }
+        else {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
+        }
       }, 
       { offset: '100%', triggerOnce: true});
-    });
-    $('.paragraphs-items-field-front-h1', context).once('npx-animate-objects').each(function() {
-      $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
-      }, 
-      { offset: '100%', triggerOnce: true});
-    });
-    $('.paragraphs-items-field-front-h3', context).once('npx-animate-objects').each(function() {
-      $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
-      }, 
-      { offset: '100%', triggerOnce: true});
-    });
-    $('.paragraphs-items-field-front-m1', context).once('npx-animate-objects').each(function() {
-      $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
-      }, 
-      { offset: '105%', triggerOnce: true});
-    });
-    $('.paragraphs-items-field-front-f1', context).once('npx-animate-objects').each(function() {
-      $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
-      }, 
-      { offset: '105%', triggerOnce: true});
     });
     $('.paragraphs-items > .field > .field-items > .field-item', context).once('npx-animate-objects').each(function() {
+      $(this).fadeTo(0, 0);
       $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
+        var $parentColumn = $(this).closest('div.views-column');
+        if($parentColumn.hasClass('views-column-2')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 500);
+        }
+        else if($parentColumn.hasClass('views-column-3')) {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 1000);
+        }
+        else {
+          Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
+        }
       }, 
       { offset: '105%', triggerOnce: true});
     });
-    $('.field-name-field-clipped-image-big-alternat', context).once('npx-animate-objects').each(function() {
-      $(this).waypoint(function(event, direction) {
-        $(this).addClass('come-in');
-      }, 
-      { offset: '105%', triggerOnce: true});
-    });
+  },
+  animateObject: function(object, delay) {
+    if($(window).width() < 768) {
+      delay = 0;
+    }
+    setTimeout( function() {
+      $(object).fadeTo(1000, 1);
+      $(object).addClass('come-in');
+    }, delay);
   },
 };
 
 Drupal.behaviors.hbvAnimateAssets = {
   attach: function(context, settings) {
-    var duration = 500;
     $('.view-top-paragraph img', context).once('npx-animate-assets').each(function() {
       $(this).css('margin-left', -$('body').outerWidth());
       $(this).waypoint(function(event, direction) {
-        $(this).animate({
-          'margin-left': 0
-        }, { duration: duration });
-      }, 
+        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
+      },
       { offset: '100%', triggerOnce: true});
     });
     $('.views-field-field-slogan .div-image img', context).once('npx-animate-assets').each(function() {
-      $(this).css('margin-left', -$('body').outerWidth());
+      if ($(this).closest('div.view-recipes').length) {
+        return;
+      }
+      var $parentColumn = $(this).closest('div.views-column');
+      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
+        $(this).css('margin-left', $('body').outerWidth());
+      }
+      else {
+        $(this).css('margin-left', -$('body').outerWidth());
+      }
       $(this).waypoint(function(event, direction) {
-        $(this).animate({
-          'margin-left': 0
-        }, { duration: duration });
-      }, 
+        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
+      },
       { offset: '50%', triggerOnce: true});
     });
     $('.field-name-field-upper-layer-with-image img', context).once('npx-animate-assets').each(function() {
-      $(this).css('margin-left', -$('body').outerWidth());
+      var $parentColumn = $(this).closest('div.views-column');
+      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
+        $(this).css('margin-left', $('body').outerWidth());
+      }
+      else {
+        $(this).css('margin-left', -$('body').outerWidth());
+      }
       $(this).waypoint(function(event, direction) {
-        $(this).animate({
-          'margin-left': 0
-        }, { duration: duration });
-      }, 
+        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
+      },
       { offset: '50%', triggerOnce: true});
     });
     $('.field-name-field-background-image', context).once('npx-animate-assets').each(function() {
-      $(this).css('margin-right', $('body').outerWidth());
+      var $parentColumn = $(this).closest('div.views-column');
+      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
+        $(this).css('right', -$('body').outerWidth());
+      }
+      else {
+        $(this).css('right', $('body').outerWidth());
+      }
       $(this).waypoint(function(event, direction) {
-        $(this).animate({
-          'margin-right': 0
-        }, { duration: duration });
-      }, 
+        Drupal.behaviors.hbvAnimateAssets.slideInAbsolute(this);
+      },
       { offset: '50%', triggerOnce: true});
     });
-//    $('.field-name-field-intro-text img', context).once('npx-animate-assets').each(function() {
-//      $(this).css('margin-left', -$('body').outerWidth());
-//      $(this).waypoint(function(event, direction) {
-//        $(this).animate({
-//          'margin-left': 0
-//        }, { duration: duration });
-//      }, 
-//      { offset: '50%', triggerOnce: true});
-//    });
-  }
+  },
+  slideIn: function (asset) {
+    var duration = 1000;
+    $(asset).animate({
+      'margin-left': 0
+    }, { duration: duration });
+  },
+  slideInAbsolute: function (asset) {
+    var duration = 1000;
+    $(asset).animate({
+      'right': 0
+    }, { duration: duration });
+  },
+};
+
+Drupal.behaviors.hbvSvgWithText = {
+  attach: function(context, settings) {
+    $('.paragraphs-item-responsive-text-on-image', context).once('npx-svg-with-text').each( function () {
+      Drupal.behaviors.hbvSvgWithText.calculateHeights(this);
+    });
+  },
+  calculateHeights: function(parentElem) {
+    var $body = $(parentElem).find('.field-name-field-body');
+    var $content = $(parentElem).find('> .content');
+    var width = $(parentElem).width();
+    var height = $(parentElem).height();
+    var x = Math.ceil(0.23 * (0.83 * height - width));
+    var h = Math.ceil(width * 1.2);
+    var $field = $(parentElem).find('.field-name-field-sp-field-2b');
+    
+    if( width/height < 0.83) {
+      $field.css('height', height + x);
+      $content.css('height', 'auto');
+      $body.css('height', 'auto');
+    } else {
+      $field.css('height', h);
+      $content.css('height', h);
+      $body.css('height', h);
+    }
+  },
+};
+
+Drupal.behaviors.hbvLangSwitcher = {
+  attach: function(context, settings) {
+    $('.responsive-menus.responsified .responsive-menus-simple', context).once('npx-lang-switcher').each( function () {
+      $langBlock = $('div#hbv-locale-wrapper', context);
+      $(this).append($langBlock.html());
+    });
+  },
 };
 
 $(window).resize(function () {
@@ -295,6 +353,10 @@ $(window).resize(function () {
 
   $('.hbv-images-processed').each(function() {
     Drupal.behaviors.hbvImages.calculateMargin(this);
+  });
+
+  $('.paragraphs-item-responsive-text-on-image').each( function () {
+    Drupal.behaviors.hbvSvgWithText.calculateHeights(this);
   });
 });
 

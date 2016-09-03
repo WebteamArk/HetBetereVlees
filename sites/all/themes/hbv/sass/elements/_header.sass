@@ -1,5 +1,6 @@
 #header
   background: #000 url('i/bg.jpg') no-repeat center center / cover
+  min-height: 340px
   .header-inner,
   .region-inner
     @include limiter
@@ -26,8 +27,12 @@
           line-height: 40px
           font-size: 16px
           text-transform: uppercase
+          &.is-active-trail,
+          &.active-trail,
+          &.active,
           &:hover
-            opacity: 0.8
+            color: #808080
+
     @include breakpoint($m)
       display: none
   #block-locale-language
@@ -50,7 +55,7 @@
     min-height: 40px
     z-index: 499
     float: right
-
+    margin-right: 20px
     .toggler
       width: 40px
       height: 40px
@@ -81,8 +86,26 @@
         line-height: 22px
         text-transform: uppercase
         font-weight: 300
+        &:hover,
+        &.is-active-trail,
+        &.active-trail
+          font-weight: bold
+      li.en
+        display: none
+      li.nl
+        margin-top: 20px
+      span.language-link
+        color: #000
+        padding: 0 20px 0 40px
+        border: none
+        font-size: 16px
+        line-height: 22px
+        text-transform: uppercase
+        font-weight: 300
         &:hover
           font-weight: bold
+
+
     .responsive-menus
       &.responsive-toggled
         background: #e8e8e9 url('i/top-menu-top.jpg') repeat left bottom
@@ -171,6 +194,7 @@
     font-size: 16px
     line-height: 22px
     text-align: center
+    color: #e6e6e6
     @include breakpoint($t)
       font-size: 14px
       line-height: 19px

@@ -16,10 +16,10 @@
       .view-id-distributors
         .view-filters
           background: #ebebed url('i/marmur.jpg') no-repeat center top / cover
-          padding: 40px 0
+          padding: 40px 0px
           form
             @include limiter
-            padding: 0
+            padding: 0 30px
             .views-exposed-widget
               margin-bottom: 0
             #edit-combine-wrapper
@@ -27,16 +27,39 @@
                 display: inline-block
                 margin-right: 34px
                 font-size: 26px
+                @media all and (min-width: 460px) and (max-width: 600px)
+                  margin-right: 10px
+                @media all and (min-width: 1px) and (max-width: 459px)
+                  margin-right: 5px
               .views-widget
                 display: inline-block
+                input#edit-combine
+                  @media all and (min-width: 460px) and (max-width: 600px)
+                    width: 160px
+                  @media all and (min-width: 1px) and (max-width: 459px)
+                    width: 110px
           input#edit-submit-distributors
             margin: 0 0 0 30px
-
+            @media all and (min-width: 460px) and (max-width: 600px)
+              margin: 0 0 0 10px
+            @media all and (min-width: 1px) and (max-width: 459px)
+              margin: 0 0 0 5px
         .view-content
           @include limiter
+          padding: 0 30px
           table
             width: 100%
             td
               padding: 0 10px 30px
   .ajax-progress-throbber
     display: none
+  .view-id-distributors
+    .views-column
+      display: inline-block
+      width: 24%
+      vertical-align: top
+      @media all and (min-width: 480px) and (max-width: 960px)
+        width: 49%
+      @media all and (min-width: 1px) and (max-width: 479px)
+        width: 100%
+        display: block

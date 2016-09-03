@@ -53,6 +53,7 @@ stylesheets[all][] = system.theme.css
 stylesheets[all][] = css/styles.css
 stylesheets[all][] = js/multiselect/jquery.multiselect.css
 stylesheets[all][] = css/hbv.css
+stylesheets[print][] = css/print.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -69,6 +70,7 @@ stylesheets[all][] = css/hbv.css
 ; Optionally add some JavaScripts to your theme.
 
 scripts[] = js/multiselect/jquery.multiselect.js
+scripts[] = js/viewport/jquery.viewport.mini.js
 scripts[] = js/script.js
 
 
