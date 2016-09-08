@@ -12,6 +12,11 @@
         width: 50%
         float: left
         margin-top: -100px
+        @include breakpoint($t)
+          width: 35%
+          margin-top: -14px
+        @include breakpoint($m)
+          width: 100%
       .g2
         width: 50%
         float: left
@@ -29,6 +34,18 @@
           content: " "
           background: transparent url('i/marmur-skos-after.png') no-repeat right top
           z-index: 2
+        @include breakpoint($t)
+          width: 65%
+          margin-top: -50px
+          &::after
+            height: 100px
+        @include breakpoint($m)
+          width: 100%
+          margin-top: -12vw
+          padding: 150px 40px 100px
+          &::after
+            height: 120px
+
         .field
           .field-label
             margin: 0 10px 0 0
@@ -39,6 +56,10 @@
       position: relative
       margin-top: 40px
       width: 33%
+      @include breakpoint($t)
+        width: 35%
+      @include breakpoint($m)
+        width: 100%
       .field-label
         font-size: 150%
         line-height: 120%
@@ -47,6 +68,10 @@
       margin-top: 40px
       width: 66%
       float: right
+      @include breakpoint($t)
+        width: 65%
+      @include breakpoint($m)
+        width: 100%
       .field-label
         font-size: 150%
         line-height: 120%
@@ -96,7 +121,7 @@
     padding: 0 1%
     @media all and (min-width: 500px) and (max-width: 859px)
       width: 50%
-      float: none
+      float: left
       &:nth-child(3)
         display: none
     @media all and (min-width: 1px) and (max-width: 499px)
@@ -110,6 +135,7 @@
   .views-row
     position: relative
     h2, h3
+      height: 0
       position: absolute
       left: 0
       bottom: 0
@@ -117,9 +143,16 @@
       +box-sizing(border-box)
       padding: 0 40px
       margin: 0
-      background: rgba(255,255,255,0.75)
       height: 0
-      overflow: hidden
+      background-color: rgba(255,255,255,0.75)
+      overflow-y: hidden
+      max-height: 0
+      transition-property: all
+      transition-duration: .8s
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+      opacity: 0
+      span
+        display: block
     a.link-absolute
       position: absolute
       left: 0
@@ -130,8 +163,18 @@
       text-indent: -9990px
   .views-row:hover
     h2, h3
-      height: auto
-      padding: 50px 40px 80px 40px
+      padding: 40px 40px 90px 40px
+      max-height: 400px
+      opacity: 1
+      span
+        transform: translateY(400px)
+        animation: come-in 900ms ease forwards
+  .views-row.is-hover
+    h2, h3
+      padding: 40px 40px 90px 40px
+      max-height: 400px
+      opacity: 1
+
 
 
 .view-id-recipes
@@ -165,3 +208,8 @@
         bottom: 0
         img
           margin-top: -50px
+// .node-type-recipe
+//   .view-id-recipes_3_random
+//     .views-row
+//       float: left
+//       width: 50%

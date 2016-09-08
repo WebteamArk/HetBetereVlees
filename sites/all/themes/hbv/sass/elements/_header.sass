@@ -88,7 +88,8 @@
         font-weight: 300
         &:hover,
         &.is-active-trail,
-        &.active-trail
+        &.active-trail,
+        &.active
           font-weight: bold
       li.en
         display: none
@@ -150,10 +151,11 @@
     #block-views-top-paragraph-block
       .views-field-field-image
         img
+          pointer-events: none
           top: -120px
 #header #block-views-top-paragraph-block
   position: relative
-  margin-bottom: 20px
+  margin-bottom: 80px
   z-index: 10
   .views-field-field-image img
     position: absolute

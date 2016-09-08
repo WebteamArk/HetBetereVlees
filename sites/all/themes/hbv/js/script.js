@@ -342,6 +342,85 @@ Drupal.behaviors.hbvLangSwitcher = {
   },
 };
 
+Drupal.behaviors.hbvFixCow = {
+  attach: function(context, settings) {
+    $('body.front .paragraphs-items-field-front-m1', context).once('npx-fix-cow').each( function () {
+      Drupal.behaviors.hbvFixCow.fixCowHeight(this);
+    });
+  },
+  fixCowHeight: function(parent) {
+    var $svg = $(parent).closest('.l-r').find('.group-left svg');
+    if($(window).width() < 960) {
+      $(parent).closest('.l-r').find('.group-left .paragraphs-item-svg-big').css('margin-top', '-100px');
+    } else {
+      $(parent).closest('.l-r').find('.group-left .paragraphs-item-svg-big').css('margin-top', '0');
+    }
+    if($(window).width() > 1024 || $(window).width() < 450) {
+      $svg.css({'margin-top': '-8vw', 'height': 'auto'});
+      $(parent).css('height', 'auto');
+      return;
+    }
+    var $text = $(parent).closest('.l-r').find('.group-right');
+    if($text.length) {
+      var width = $svg.width();
+      var height = $text.outerHeight();;
+      var x = Math.ceil(0.225 * (0.83 * height - width));
+      var h = Math.ceil(width * 1.2);
+      
+      if( width/height < 0.83) {
+        $svg.css({'margin-top': '-8vw', 'height': height + x});
+        $(parent).css('height', height + x);
+      } else {
+        $svg.css({'margin-top': '-8vw', 'height': h});
+        $(parent).css('height', h);
+      }
+    }
+  },
+};
+
+Drupal.behaviors.hbvLimitTextWidth = {
+  attach: function(context, settings) {
+    $('.paragraphs-item-intro-text', context).once('npx-lang-switcher').each( function () {
+      Drupal.behaviors.hbvLimitTextWidth.setContainerWidth(this);
+    });
+  },
+  setContainerWidth: function(container) {
+    $button = $(container).find('a.ebutton');
+    if($button.length) {
+      var width = ($button.outerWidth() > 230 ? $button.outerWidth() : 230);
+      $(container).css('max-width', width);
+    }
+  },
+};
+
+Drupal.behaviors.hbvMobileClick = {
+  attach: function(context, settings) {
+    $('.view-id-recipes .views-row a.link-absolute', context).once('npx-mobile-click').each( function () {
+      Drupal.behaviors.hbvMobileClick.processClick(this);
+    });
+    $('.view-id-recipe_to_front .views-row a.link-absolute', context).once('npx-mobile-click').each( function () {
+      Drupal.behaviors.hbvMobileClick.processClick(this);
+    });
+    $('.view-recipes-3-random .views-row a.link-absolute', context).once('npx-mobile-click').each( function () {
+      Drupal.behaviors.hbvMobileClick.processClick(this);
+    });
+  },
+  isMobile: function () {
+    return (('ontouchstart' in document.documentElement) && ($(window).width() <= 768));
+  },
+  processClick: function (elem) {
+    var $row = $(elem).closest('div.views-row');
+    $(elem).click( function(e) {
+      if(Drupal.behaviors.hbvMobileClick.isMobile() && !$row.hasClass('is-hover')) {
+        e.preventDefault();
+        $row.addClass('is-hover');
+      } else {
+        $row.removeClass('is-hover');
+      }
+    });
+  },
+};
+
 $(window).resize(function () {
   $('.hbv-div-height-processed').each(function() {
     Drupal.behaviors.hbvDivHeight.calculateHeight(this);
@@ -358,6 +437,14 @@ $(window).resize(function () {
   $('.paragraphs-item-responsive-text-on-image').each( function () {
     Drupal.behaviors.hbvSvgWithText.calculateHeights(this);
   });
+
+  $('.paragraphs-item-intro-text').each( function () {
+    Drupal.behaviors.hbvLimitTextWidth.setContainerWidth(this);
+  });
+  $('body.front .paragraphs-items-field-front-m1').each( function () {
+    Drupal.behaviors.hbvFixCow.fixCowHeight(this);
+  });
+
 });
 
 })(jQuery, Drupal, this, this.document);

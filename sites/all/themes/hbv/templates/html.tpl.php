@@ -50,23 +50,25 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
   
-  <!-- global polygon definition -->
-  <svg viewBox="0 0 800 960" width="0" height="0">
-    <defs>
-      <polygon id="hbv-poly-800x960" fill="none" points="0 154, 0 960, 800 806, 800 0"/>
-    </defs>
-  </svg>
-  <!-- global polygon definition -->
-  <svg viewBox="0 0 960 1152" width="0" height="0">
-    <defs>
-      <polygon id="hbv-poly-960-1152" fill="none" points="0 185, 0 1152, 960 967, 960 0"/>
-    </defs>
-  </svg>
-  <!-- global polygon definition -->
-  <svg viewBox="0 0 960 700" width="0" height="0">
-    <defs>
-      <polygon id="hbv-poly-960-700" fill="none" points="0 185, 0 700, 960 515, 960 0"/>
-    </defs>
-  </svg>
+  <div style="display: none;">
+    <!-- global polygon definition -->
+    <svg viewBox="0 0 800 960" width="0" height="0">
+      <defs>
+        <polygon id="hbv-poly-800x960" fill="none" points="0 154, 0 960, 800 806, 800 0"/>
+      </defs>
+    </svg>
+    <!-- global polygon definition -->
+    <svg viewBox="0 0 960 1152" width="0" height="0">
+      <defs>
+        <polygon id="hbv-poly-960-1152" fill="none" points="0 185, 0 1152, 960 967, 960 0"/>
+      </defs>
+    </svg>
+    <!-- global polygon definition -->
+    <svg viewBox="0 0 960 700" width="0" height="0">
+      <defs>
+        <polygon id="hbv-poly-960-700" fill="none" points="0 185, 0 700, 960 515, 960 0"/>
+      </defs>
+    </svg>
+  </div>
 </body>
 </html>

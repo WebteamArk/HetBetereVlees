@@ -174,7 +174,7 @@
 
 .node-type-front-page
   .node-front-page.view-mode-full
-    margin-top: -80px
+    margin-top: -40px
   // .entity-paragraphs-item
   //   margin-top: 0
   //   margin-top: -40px
@@ -228,7 +228,8 @@
       width: 32%
       float: left
       margin-right: 1%
-      margin-top: 240px
+      margin-top: 150px
+      margin-top: 200px
       @media all and (min-width: 468px) and (max-width: 767px)
         margin-top: 160px
         width: 49%
@@ -256,6 +257,11 @@
       color: #000
       .field-name-field-front-h3
         padding: 80px 40px 70px
+        p + p
+          margin-bottom: 0
+        @media all and (min-width: 468px) and (max-width: 767px)
+          padding: 10px 40px 10px
+
       @media all and (min-width: 468px) and (max-width: 767px)
         float: none
         margin: 0 0 0 0
@@ -266,16 +272,17 @@
           float: left
           margin-right: 1%
           margin-top: -11vw
-          @include breakpoint($t)
-          @include breakpoint($m)
-
         > div:nth-child(2)
           float: left
           margin-left: 1%
+          margin-top: -10vw
           width: 49%
           padding-bottom: 30px
           a.ebutton
             min-width: auto
+      @media all and (min-width: 600px) and (max-width: 767px)
+        > div:nth-child(2)
+          margin-top: -1vw
       @media all and (min-width: 1px) and (max-width: 467px)
         float: none
         margin: 0 0 0 0
@@ -309,12 +316,19 @@
       .paragraphs-item-svg-small
         margin-top: -60px
         position: relative
+
       @media all and (min-width: 768px) and (max-width: 960px)
         margin-top: 15vw
       @media all and (min-width: 468px) and (max-width: 767px)
-        width: 100%
-        margin-top: 0
-        position: relative
+        position: absolute
+        width: 50%
+        margin-top: -15px
+        margin-top: 130px
+        top: 0
+        left: 0
+        z-index: 10
+        .paragraphs-item-intro-text
+          padding: 80px 40px 60px
       @media all and (min-width: 1px) and (max-width: 467px)
         width: 100%
         margin-top: 0
@@ -353,15 +367,13 @@
           @media all and (min-width: 768px) and (max-width: 1000px)
             width: 50%
             bottom: 18vw
-          @media all and (min-width: 660px) and (max-width: 767px)
-            width: 50%
-            bottom: 18vw
-          @media all and (min-width: 1px) and (max-width: 659px)
+          @media all and (min-width: 1px) and (max-width: 767px)
             width: 100%
-            padding: 40px 0 0 0
+            padding: 30vw 0 0 0
             position: relative
             right: auto
             bottom: auto
+
 
 .node-type-front-page
   .field-type-viewreference
@@ -372,17 +384,32 @@
       bottom: 0
       width: 100%
       +box-sizing(border-box)
-      padding: 0
-      // background: transparent url('i/w75.png') right top no-repeat
+      padding: 0 40px
       background: rgba(255,255,255,0.75)
-      height: 0
-      overflow: auto
-      @include animacja
+      overflow-y: hidden
+      max-height: 0
+      transition-property: all
+      transition-duration: .5s
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+      opacity: 0
       a
         text-decoration: none
+        display: block
       h2, h3
-        padding: 30px 40px 60px 40px
+        padding: 0
         color: #333
+        margin: 0
     &:hover
       .views-field-title
-        height: auto
+        padding: 40px 40px 60px 40px
+        max-height: 400px
+        opacity: 1
+        a
+          transform: translateY(400px)
+          animation: come-in 900ms ease forwards
+  .field-type-viewreference
+    .is-hover
+      .views-field-title
+        padding: 40px 40px 60px 40px
+        max-height: 400px
+        opacity: 1
