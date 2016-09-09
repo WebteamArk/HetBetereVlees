@@ -14,6 +14,7 @@
         margin-top: -100px
         @include breakpoint($t)
           width: 35%
+          width: 50%
           margin-top: -14px
         @include breakpoint($m)
           width: 100%
@@ -24,6 +25,7 @@
         position: relative
         z-index: 1
         padding: 100px 40px 100px
+        padding: 0 40px
         +box-sizing(border-box)
         &::after
           position: absolute
@@ -36,19 +38,24 @@
           z-index: 2
         @include breakpoint($t)
           width: 65%
+          width: 50%
           margin-top: -50px
           &::after
             height: 100px
         @include breakpoint($m)
           width: 100%
           margin-top: -12vw
-          padding: 150px 40px 100px
+          padding: 150px 40px 150px
           &::after
             height: 120px
-
+        table
+          margin: 0
+        td
+          vertical-align: middle
         .field
           .field-label
             margin: 0 10px 0 0
+            text-transform: uppercase
           .field-item
             display: inline-block
             margin: 0 5px 0 0
@@ -61,7 +68,7 @@
       @include breakpoint($m)
         width: 100%
       .field-label
-        font-size: 150%
+        font-size: 200%
         line-height: 120%
     > .group-right
       position: relative
@@ -73,7 +80,7 @@
       @include breakpoint($m)
         width: 100%
       .field-label
-        font-size: 150%
+        font-size: 200%
         line-height: 120%
       .field-name-link-to-recipes
         margin: 85px 0 0 0

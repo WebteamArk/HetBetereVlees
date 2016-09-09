@@ -49,7 +49,9 @@ strong, .acties-text, #block-system-main-menu a.active {
 #views-exposed-form-recipes-block,
 body .view-id-recipes .ms-options-wrap button,
 body .view-id-recipes .ms-options-wrap > .ms-options > ul span,
-input#edit-submit-distributors {
+input#edit-submit-distributors,
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid .group-left .field-label,
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid .group-right .field-label {
   font-family: "Amatic SC";
   font-weight: 700;
 }
@@ -391,9 +393,9 @@ h3 {
 }
 /* line 187, ../sass/elements/_elements.sass */
 .node-type-recipe #content .button, .node-type-recipe #content a.button, .node-type-recipe #content a.ebutton {
-  color: #fff;
+  color: #000;
   border: 1px solid #000;
-  background: #000;
+  background: #fff;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
   /* line 187, ../sass/elements/_elements.sass */
@@ -411,8 +413,8 @@ h3 {
 }
 /* line 197, ../sass/elements/_elements.sass */
 .node-type-recipe #content .button:hover, .node-type-recipe #content a.button:hover, .node-type-recipe #content a.ebutton:hover {
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
 }
 
 /* line 203, ../sass/elements/_elements.sass */
@@ -2017,6 +2019,7 @@ input#edit-submit-search-by-zip:hover {
   /* line 11, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g1 {
     width: 35%;
+    width: 50%;
     margin-top: -14px;
   }
 }
@@ -2026,7 +2029,7 @@ input#edit-submit-search-by-zip:hover {
     width: 100%;
   }
 }
-/* line 20, ../sass/elements/_node-recipe.sass */
+/* line 21, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2 {
   width: 50%;
   float: left;
@@ -2034,11 +2037,12 @@ input#edit-submit-search-by-zip:hover {
   position: relative;
   z-index: 1;
   padding: 100px 40px 100px;
+  padding: 0 40px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 28, ../sass/elements/_node-recipe.sass */
+/* line 30, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2::after {
   position: absolute;
   left: 0;
@@ -2050,61 +2054,71 @@ input#edit-submit-search-by-zip:hover {
   z-index: 2;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
-  /* line 20, ../sass/elements/_node-recipe.sass */
+  /* line 21, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2 {
     width: 65%;
+    width: 50%;
     margin-top: -50px;
   }
-  /* line 40, ../sass/elements/_node-recipe.sass */
+  /* line 43, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2::after {
     height: 100px;
   }
 }
 @media (max-width: 767px) {
-  /* line 20, ../sass/elements/_node-recipe.sass */
+  /* line 21, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2 {
     width: 100%;
     margin-top: -12vw;
-    padding: 150px 40px 100px;
+    padding: 150px 40px 150px;
   }
-  /* line 46, ../sass/elements/_node-recipe.sass */
+  /* line 49, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2::after {
     height: 120px;
   }
 }
-/* line 50, ../sass/elements/_node-recipe.sass */
+/* line 51, ../sass/elements/_node-recipe.sass */
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2 table {
+  margin: 0;
+}
+/* line 53, ../sass/elements/_node-recipe.sass */
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2 td {
+  vertical-align: middle;
+}
+/* line 56, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2 .field .field-label {
   margin: 0 10px 0 0;
+  text-transform: uppercase;
 }
-/* line 52, ../sass/elements/_node-recipe.sass */
+/* line 59, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-header .g2 .field .field-item {
   display: inline-block;
   margin: 0 5px 0 0;
 }
-/* line 55, ../sass/elements/_node-recipe.sass */
+/* line 62, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-left {
   position: relative;
   margin-top: 40px;
   width: 33%;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
-  /* line 55, ../sass/elements/_node-recipe.sass */
+  /* line 62, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-left {
     width: 35%;
   }
 }
 @media (max-width: 767px) {
-  /* line 55, ../sass/elements/_node-recipe.sass */
+  /* line 62, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-left {
     width: 100%;
   }
 }
-/* line 63, ../sass/elements/_node-recipe.sass */
+/* line 70, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-left .field-label {
-  font-size: 150%;
+  font-size: 200%;
   line-height: 120%;
 }
-/* line 66, ../sass/elements/_node-recipe.sass */
+/* line 73, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-right {
   position: relative;
   margin-top: 40px;
@@ -2112,32 +2126,32 @@ input#edit-submit-search-by-zip:hover {
   float: right;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
-  /* line 66, ../sass/elements/_node-recipe.sass */
+  /* line 73, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-right {
     width: 65%;
   }
 }
 @media (max-width: 767px) {
-  /* line 66, ../sass/elements/_node-recipe.sass */
+  /* line 73, ../sass/elements/_node-recipe.sass */
   .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-right {
     width: 100%;
   }
 }
-/* line 75, ../sass/elements/_node-recipe.sass */
+/* line 82, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-right .field-label {
-  font-size: 150%;
+  font-size: 200%;
   line-height: 120%;
 }
-/* line 78, ../sass/elements/_node-recipe.sass */
+/* line 85, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-right .field-name-link-to-recipes {
   margin: 85px 0 0 0;
 }
-/* line 80, ../sass/elements/_node-recipe.sass */
+/* line 87, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-footer {
   position: relative;
   padding-top: 40px;
 }
-/* line 86, ../sass/elements/_node-recipe.sass */
+/* line 93, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-footer .field-name-field-image-1 .field-item,
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-footer .field-name-field-image-2 .field-item,
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-footer .field-name-field-image-3 .field-item {
@@ -2145,46 +2159,46 @@ input#edit-submit-search-by-zip:hover {
   margin: 1%;
   float: left;
 }
-/* line 90, ../sass/elements/_node-recipe.sass */
+/* line 97, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-footer .field-name-field-image-2 img {
   margin-top: 40px;
 }
-/* line 92, ../sass/elements/_node-recipe.sass */
+/* line 99, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid > .group-footer .field-name-field-image-3 img {
   margin-top: -40px;
 }
-/* line 94, ../sass/elements/_node-recipe.sass */
+/* line 101, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .view-mode-full.ds-2col-stacked-fluid .links.inline {
   clear: both;
   display: block;
   padding: 40px 0;
 }
-/* line 98, ../sass/elements/_node-recipe.sass */
+/* line 105, ../sass/elements/_node-recipe.sass */
 .node-type-recipe .node.node-recipe .group-footer {
   display: none;
 }
-/* line 101, ../sass/elements/_node-recipe.sass */
+/* line 108, ../sass/elements/_node-recipe.sass */
 .node-type-recipe ul li {
   list-style-type: none;
   list-style-image: url("i/list.png");
   vertical-align: middle;
 }
 
-/* line 107, ../sass/elements/_node-recipe.sass */
+/* line 114, ../sass/elements/_node-recipe.sass */
 .view-id-recipes_3_random {
   padding-top: 40px;
 }
 @media all and (min-width: 860px) {
-  /* line 111, ../sass/elements/_node-recipe.sass */
+  /* line 118, ../sass/elements/_node-recipe.sass */
   .view-id-recipes_3_random .view-content .views-row:nth-child(1) {
     margin-top: 50px;
   }
-  /* line 113, ../sass/elements/_node-recipe.sass */
+  /* line 120, ../sass/elements/_node-recipe.sass */
   .view-id-recipes_3_random .view-content .views-row:nth-child(2) {
     margin-top: 100px;
   }
 }
-/* line 115, ../sass/elements/_node-recipe.sass */
+/* line 122, ../sass/elements/_node-recipe.sass */
 .view-id-recipes_3_random .view-content:after {
   clear: both;
   content: ".";
@@ -2192,7 +2206,7 @@ input#edit-submit-search-by-zip:hover {
   height: 0;
   visibility: hidden;
 }
-/* line 117, ../sass/elements/_node-recipe.sass */
+/* line 124, ../sass/elements/_node-recipe.sass */
 .view-id-recipes_3_random .views-row {
   width: 33%;
   float: left;
@@ -2202,30 +2216,30 @@ input#edit-submit-search-by-zip:hover {
   padding: 0 1%;
 }
 @media all and (min-width: 500px) and (max-width: 859px) {
-  /* line 117, ../sass/elements/_node-recipe.sass */
+  /* line 124, ../sass/elements/_node-recipe.sass */
   .view-id-recipes_3_random .views-row {
     width: 50%;
     float: left;
   }
-  /* line 125, ../sass/elements/_node-recipe.sass */
+  /* line 132, ../sass/elements/_node-recipe.sass */
   .view-id-recipes_3_random .views-row:nth-child(3) {
     display: none;
   }
 }
 @media all and (min-width: 1px) and (max-width: 499px) {
-  /* line 117, ../sass/elements/_node-recipe.sass */
+  /* line 124, ../sass/elements/_node-recipe.sass */
   .view-id-recipes_3_random .views-row {
     width: 100%;
     float: none;
   }
 }
 
-/* line 135, ../sass/elements/_node-recipe.sass */
+/* line 142, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row,
 .view-id-recipes_3_random .views-row {
   position: relative;
 }
-/* line 137, ../sass/elements/_node-recipe.sass */
+/* line 144, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row h2, .view-id-recipes .views-row h3,
 .view-id-recipes_3_random .views-row h2,
 .view-id-recipes_3_random .views-row h3 {
@@ -2248,13 +2262,13 @@ input#edit-submit-search-by-zip:hover {
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   opacity: 0;
 }
-/* line 154, ../sass/elements/_node-recipe.sass */
+/* line 161, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row h2 span, .view-id-recipes .views-row h3 span,
 .view-id-recipes_3_random .views-row h2 span,
 .view-id-recipes_3_random .views-row h3 span {
   display: block;
 }
-/* line 156, ../sass/elements/_node-recipe.sass */
+/* line 163, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row a.link-absolute,
 .view-id-recipes_3_random .views-row a.link-absolute {
   position: absolute;
@@ -2265,7 +2279,7 @@ input#edit-submit-search-by-zip:hover {
   z-index: 10;
   text-indent: -9990px;
 }
-/* line 165, ../sass/elements/_node-recipe.sass */
+/* line 172, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row:hover h2, .view-id-recipes .views-row:hover h3,
 .view-id-recipes_3_random .views-row:hover h2,
 .view-id-recipes_3_random .views-row:hover h3 {
@@ -2273,14 +2287,14 @@ input#edit-submit-search-by-zip:hover {
   max-height: 400px;
   opacity: 1;
 }
-/* line 169, ../sass/elements/_node-recipe.sass */
+/* line 176, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row:hover h2 span, .view-id-recipes .views-row:hover h3 span,
 .view-id-recipes_3_random .views-row:hover h2 span,
 .view-id-recipes_3_random .views-row:hover h3 span {
   transform: translateY(400px);
   animation: come-in 900ms ease forwards;
 }
-/* line 173, ../sass/elements/_node-recipe.sass */
+/* line 180, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row.is-hover h2, .view-id-recipes .views-row.is-hover h3,
 .view-id-recipes_3_random .views-row.is-hover h2,
 .view-id-recipes_3_random .views-row.is-hover h3 {
@@ -2289,15 +2303,15 @@ input#edit-submit-search-by-zip:hover {
   opacity: 1;
 }
 
-/* line 182, ../sass/elements/_node-recipe.sass */
+/* line 189, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .title-type-Recipe {
   display: none;
 }
-/* line 186, ../sass/elements/_node-recipe.sass */
+/* line 193, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-clipped-image + .views-field-title .title-type-Recipe {
   display: block;
 }
-/* line 188, ../sass/elements/_node-recipe.sass */
+/* line 195, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan {
   padding: 70px 30px 110px;
   position: relative;
@@ -2305,13 +2319,13 @@ input#edit-submit-search-by-zip:hover {
   line-height: 28px;
 }
 @media (max-width: 767px) {
-  /* line 188, ../sass/elements/_node-recipe.sass */
+  /* line 195, ../sass/elements/_node-recipe.sass */
   .view-id-recipes .views-row .views-field-field-slogan {
     font-size: 24px;
     line-height: 24px;
   }
 }
-/* line 196, ../sass/elements/_node-recipe.sass */
+/* line 203, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image {
   display: block;
   position: absolute;
@@ -2320,17 +2334,17 @@ input#edit-submit-search-by-zip:hover {
   max-width: 30%;
   max-height: 50px;
 }
-/* line 203, ../sass/elements/_node-recipe.sass */
+/* line 210, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image.top {
   right: 0;
   top: 0;
 }
-/* line 206, ../sass/elements/_node-recipe.sass */
+/* line 213, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image.bottom {
   left: 0;
   bottom: 0;
 }
-/* line 209, ../sass/elements/_node-recipe.sass */
+/* line 216, ../sass/elements/_node-recipe.sass */
 .view-id-recipes .views-row .views-field-field-slogan .div-image.bottom img {
   margin-top: -50px;
 }
@@ -3406,7 +3420,7 @@ input#edit-submit-search-by-zip:hover {
   /* line 358, ../sass/elements/_front.sass */
   .node-type-front-page .group-footer .field-name-field-front-f1 > .field-items > .field-item:nth-child(1) {
     width: 100%;
-    padding: 30vw 0 0 0;
+    padding: 30vw 0 0 40px;
     position: relative;
     right: auto;
     bottom: auto;
