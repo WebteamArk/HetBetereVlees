@@ -216,3 +216,76 @@
       pointer-events: none
     @include breakpoint($m)
       display: none
+  .views-field-field-assets
+    position: absolute
+    top: 0
+    width: 100%
+    pointer-events: none
+    .field-name-field-asset-1
+      .field-item
+        position: absolute
+        display: inline-block
+        @keyframes animate-assets
+          to
+            transform: translate(0,0)
+      .field-item:nth-child(1)
+        top: 170px
+        left: 250px
+        transform: translate(-250px, 25px)
+        &.animate
+          animation: animate-assets 2.2s ease forwards
+      .field-item:nth-child(2)
+        top: 140px
+        right: 300px
+        transform: translate(350px, 50px)
+        &.animate
+          animation: animate-assets 1.8s ease forwards
+      .field-item:nth-child(3)
+        top: 110px
+        right: 200px
+        transform: translate(200px, -100px)
+        &.animate
+          animation: animate-assets 2.0s ease forwards
+      .field-item:nth-child(4)
+        top: 100px
+        left: 100px
+        transform: translate(-200px)
+        &.animate
+          animation: animate-assets 2.5s ease forwards
+      .field-item:nth-child(5)
+        top: 130px
+        left: 440px
+        transform: translate(-50px, 200px)
+        &.animate
+          animation: animate-assets 1.8s ease forwards
+      .field-item:nth-child(6)
+        top: -50px
+        left: 250px
+        transform: translate(-250px, -100px)
+        &.animate
+          animation: animate-assets 2.2s ease forwards
+      .field-item:nth-child(7)
+        top: 170px
+        left: 360px
+        transform: translate(-150px, 150px)
+        &.animate
+          animation: animate-assets 2.5s ease forwards
+      .field-item:nth-child(8)
+        top: 120px
+        left: 320px
+        transform: translate(-250px, 30px)
+        &.animate
+          animation: animate-assets 1.0s ease forwards
+      .field-item:nth-child(9)
+        top: 270px
+        left: 480px
+        transform: translate(-130px, 70px)
+        &.animate
+          animation: animate-assets 2.2s ease forwards
+      .field-item:nth-child(10)
+        top: 0px
+        right: 230px
+        transform: translate(150px, -100px)
+        &.animate
+          animation: animate-assets 1.8s ease forwards
+        

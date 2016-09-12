@@ -1022,6 +1022,123 @@ a.link-absolute {
     display: none;
   }
 }
+/* line 219, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+/* line 225, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item {
+  position: absolute;
+  display: inline-block;
+}
+@keyframes animate-assets {
+  to {
+    transform: translate(0, 0);
+  }
+}
+/* line 231, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(1) {
+  top: 170px;
+  left: 250px;
+  transform: translate(-250px, 25px);
+}
+/* line 235, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(1).animate {
+  animation: animate-assets 2.2s ease forwards;
+}
+/* line 237, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(2) {
+  top: 140px;
+  right: 300px;
+  transform: translate(350px, 50px);
+}
+/* line 241, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(2).animate {
+  animation: animate-assets 1.8s ease forwards;
+}
+/* line 243, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(3) {
+  top: 110px;
+  right: 200px;
+  transform: translate(200px, -100px);
+}
+/* line 247, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(3).animate {
+  animation: animate-assets 2s ease forwards;
+}
+/* line 249, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(4) {
+  top: 100px;
+  left: 100px;
+  transform: translate(-200px);
+}
+/* line 253, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(4).animate {
+  animation: animate-assets 2.5s ease forwards;
+}
+/* line 255, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(5) {
+  top: 130px;
+  left: 440px;
+  transform: translate(-50px, 200px);
+}
+/* line 259, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(5).animate {
+  animation: animate-assets 1.8s ease forwards;
+}
+/* line 261, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(6) {
+  top: -50px;
+  left: 250px;
+  transform: translate(-250px, -100px);
+}
+/* line 265, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(6).animate {
+  animation: animate-assets 2.2s ease forwards;
+}
+/* line 267, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(7) {
+  top: 170px;
+  left: 360px;
+  transform: translate(-150px, 150px);
+}
+/* line 271, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(7).animate {
+  animation: animate-assets 2.5s ease forwards;
+}
+/* line 273, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(8) {
+  top: 120px;
+  left: 320px;
+  transform: translate(-250px, 30px);
+}
+/* line 277, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(8).animate {
+  animation: animate-assets 1s ease forwards;
+}
+/* line 279, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(9) {
+  top: 270px;
+  left: 480px;
+  transform: translate(-130px, 70px);
+}
+/* line 283, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(9).animate {
+  animation: animate-assets 2.2s ease forwards;
+}
+/* line 285, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(10) {
+  top: 0px;
+  right: 230px;
+  transform: translate(150px, -100px);
+}
+/* line 289, ../sass/elements/_header.sass */
+#header #block-views-top-paragraph-block .views-field-field-assets .field-name-field-asset-1 .field-item:nth-child(10).animate {
+  animation: animate-assets 1.8s ease forwards;
+}
 
 /* line 1, ../sass/elements/_footer.sass */
 #footer-dark {

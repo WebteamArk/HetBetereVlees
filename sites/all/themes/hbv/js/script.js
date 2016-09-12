@@ -229,9 +229,9 @@ Drupal.behaviors.hbvAnimateObjects = {
           Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
         }
       }, 
-      { offset: '100%', triggerOnce: true});
+      { offset: '100%', triggerOnce: false});
     });
-    $('node:not(.no-field-item-animation) .paragraphs-items > .field > .field-items > .field-item', context).once('npx-animate-objects').each(function() {
+    $('body:not(.page-node-62) .paragraphs-items > .field > .field-items > .field-item', context).once('npx-animate-objects').each(function() {
       $(this).fadeTo(0, 0);
       $(this).waypoint(function(event, direction) {
         var $parentColumn = $(this).closest('div.views-column');
@@ -261,10 +261,16 @@ Drupal.behaviors.hbvAnimateObjects = {
 
 Drupal.behaviors.hbvAnimateAssets = {
   attach: function(context, settings) {
-    $('.view-top-paragraph img', context).once('npx-animate-assets').each(function() {
-      $(this).css('margin-left', -$('body').outerWidth());
+//    $('.view-top-paragraph img', context).once('npx-animate-assets').each(function() {
+//      $(this).css('margin-left', -$('body').outerWidth());
+//      $(this).waypoint(function(event, direction) {
+//        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
+//      },
+//      { offset: '100%', triggerOnce: true});
+//    });
+    $('.field-name-field-asset-1 .field-item', context).once('npx-animate-assets').each(function() {
       $(this).waypoint(function(event, direction) {
-        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
+        $(this).addClass('animate');
       },
       { offset: '100%', triggerOnce: true});
     });
