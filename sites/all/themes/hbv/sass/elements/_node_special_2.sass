@@ -1,13 +1,13 @@
 .node-type-special-page-type-2
+  #header #block-views-top-paragraph-block
+    margin-bottom: 125px
   .entity-paragraphs-item
     margin-top: -57px
     padding: 0 0px
     .field-item
       margin-top: 0
   .node.view-mode-full
-    margin-top: -25px
-    font-size: 18px
-    line-height: 150% 
+    margin-top: -38px
   .g3
     position: relative
     z-index: 1
@@ -67,10 +67,20 @@
         font-size: 32px
         line-height: 120%
         margin: 0 0 10px
+    &.paragraphs-item-svg-big-alternative
+      position: relative
+      margin-top: 0
+      @include breakpoint($t)
+        margin-top: 0
+      @include breakpoint($m)
+        margin-top: 0
+
+
   .node.view-mode-full.actie
     .styles-white-font-color
       font-size: 20px
       line-height: 24px
+      font-weight: 700
       @include breakpoint($t)
         font-size: 18px
         line-height: 22px
@@ -81,21 +91,24 @@
         color: #fff
         padding: 0 0 0 0
         background-image: none
-        font-size: 60px
+        font-size: 50px
         line-height: 60px
+        font-family: "Open Sans"
+        font-weight: 700
         margin: 0 0 10px
-        font-weight: 300
-        @include breakpoint($t)
-          font-size: 44px
-          line-height: 44px
-        @include breakpoint($m)
-          font-size: 44px
-          line-height: 44px
-          font-size: 42px
-          line-height: 42px
+
 
   .group-footer
-    .paragraphs-item-svg-big-alternative
+    .entity.entity-paragraphs-item.paragraphs-item-svg-big-alternative
+      position: relative
+      .field-name-field-upper-layer-with-image
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        z-index: 10
+        pointer-events: none
+    .paragraphs-items-field-paragraphs-full
       position: relative
       .field-name-field-upper-layer-with-image
         position: absolute

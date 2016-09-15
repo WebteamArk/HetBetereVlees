@@ -174,7 +174,7 @@ Drupal.behaviors.hbvAnimateObjects = {
         else {
           Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
         }
-      }, 
+      },
       { offset: '100%', triggerOnce: true});
     });
     $('.view-distributors .views-row', context).once('npx-animate-objects').each(function() {
@@ -193,7 +193,7 @@ Drupal.behaviors.hbvAnimateObjects = {
         else {
           Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
         }
-      }, 
+      },
       { offset: '100%', triggerOnce: true});
     });
     $('.view-recipe-to-front .views-row', context).once('npx-animate-objects').each(function() {
@@ -209,7 +209,7 @@ Drupal.behaviors.hbvAnimateObjects = {
         else {
           Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
         }
-      }, 
+      },
       { offset: '100%', triggerOnce: true});
     });
     $('.view-search-by-zip .views-row', context).once('npx-animate-objects').each(function() {
@@ -228,7 +228,7 @@ Drupal.behaviors.hbvAnimateObjects = {
         else {
           Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
         }
-      }, 
+      },
       { offset: '100%', triggerOnce: false});
     });
     $('body:not(.page-node-62) .paragraphs-items > .field > .field-items > .field-item', context).once('npx-animate-objects').each(function() {
@@ -244,7 +244,7 @@ Drupal.behaviors.hbvAnimateObjects = {
         else {
           Drupal.behaviors.hbvAnimateObjects.animateObject(this, 0);
         }
-      }, 
+      },
       { offset: '105%', triggerOnce: true});
     });
   },
@@ -274,61 +274,61 @@ Drupal.behaviors.hbvAnimateAssets = {
       },
       { offset: '100%', triggerOnce: true});
     });
-    $('.views-field-field-slogan .div-image img', context).once('npx-animate-assets').each(function() {
-      if ($(this).closest('div.view-recipes').length) {
-        return;
-      }
-      var $parentColumn = $(this).closest('div.views-column');
-      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
-        $(this).css('margin-left', $('body').outerWidth());
-      }
-      else {
-        $(this).css('margin-left', -$('body').outerWidth());
-      }
-      $(this).waypoint(function(event, direction) {
-        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
-      },
-      { offset: '50%', triggerOnce: true});
-    });
-    $('.field-name-field-upper-layer-with-image img', context).once('npx-animate-assets').each(function() {
-      var $parentColumn = $(this).closest('div.views-column');
-      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
-        $(this).css('margin-left', $('body').outerWidth());
-      }
-      else {
-        $(this).css('margin-left', -$('body').outerWidth());
-      }
-      $(this).waypoint(function(event, direction) {
-        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
-      },
-      { offset: '50%', triggerOnce: true});
-    });
-    $('.field-name-field-background-image', context).once('npx-animate-assets').each(function() {
-      var $parentColumn = $(this).closest('div.views-column');
-      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
-        $(this).css('right', -$('body').outerWidth());
-      }
-      else {
-        $(this).css('right', $('body').outerWidth());
-      }
-      $(this).waypoint(function(event, direction) {
-        Drupal.behaviors.hbvAnimateAssets.slideInAbsolute(this);
-      },
-      { offset: '50%', triggerOnce: true});
-    });
+//    $('.views-field-field-slogan .div-image img', context).once('npx-animate-assets').each(function() {
+//      if ($(this).closest('div.view-recipes').length) {
+//        return;
+//      }
+//      var $parentColumn = $(this).closest('div.views-column');
+//      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
+//        $(this).css('margin-left', $('body').outerWidth());
+//      }
+//      else {
+//        $(this).css('margin-left', -$('body').outerWidth());
+//      }
+//      $(this).waypoint(function(event, direction) {
+//        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
+//      },
+//      { offset: '50%', triggerOnce: true});
+//    });
+//    $('.field-name-field-upper-layer-with-image img', context).once('npx-animate-assets').each(function() {
+//      var $parentColumn = $(this).closest('div.views-column');
+//      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
+//        $(this).css('margin-left', $('body').outerWidth());
+//      }
+//      else {
+//        $(this).css('margin-left', -$('body').outerWidth());
+//      }
+//      $(this).waypoint(function(event, direction) {
+//        Drupal.behaviors.hbvAnimateAssets.slideIn(this);
+//      },
+//      { offset: '50%', triggerOnce: true});
+//    });
+//    $('.field-name-field-background-image', context).once('npx-animate-assets').each(function() {
+//      var $parentColumn = $(this).closest('div.views-column');
+//      if($parentColumn.hasClass('views-column-2') || $parentColumn.hasClass('views-column-3')) {
+//        $(this).css('right', -$('body').outerWidth());
+//      }
+//      else {
+//        $(this).css('right', $('body').outerWidth());
+//      }
+//      $(this).waypoint(function(event, direction) {
+//        Drupal.behaviors.hbvAnimateAssets.slideInAbsolute(this);
+//      },
+//      { offset: '50%', triggerOnce: true});
+//    });
   },
-  slideIn: function (asset) {
-    var duration = 1000;
-    $(asset).animate({
-      'margin-left': 0
-    }, { duration: duration });
-  },
-  slideInAbsolute: function (asset) {
-    var duration = 1000;
-    $(asset).animate({
-      'right': 0
-    }, { duration: duration });
-  },
+//  slideIn: function (asset) {
+//    var duration = 1000;
+//    $(asset).animate({
+//      'margin-left': 0
+//    }, { duration: duration });
+//  },
+//  slideInAbsolute: function (asset) {
+//    var duration = 1000;
+//    $(asset).animate({
+//      'right': 0
+//    }, { duration: duration });
+//  },
 };
 
 Drupal.behaviors.hbvSvgWithText = {
@@ -345,7 +345,7 @@ Drupal.behaviors.hbvSvgWithText = {
     var x = Math.ceil(0.23 * (0.83 * height - width));
     var h = Math.ceil(width * 1.2);
     var $field = $(parentElem).find('.field-name-field-sp-field-2b');
-    
+
     if( width/height < 0.83) {
       $field.css('height', height + x);
       $content.css('height', 'auto');
@@ -376,7 +376,7 @@ Drupal.behaviors.hbvFixCow = {
   fixCowHeight: function(parent) {
     var mt = '-8vw';
     if($(window).width() > 1300) {
-      mt = '-130px';
+      mt = '-105px';
     }
     var $svg = $(parent).closest('.l-r').find('.group-left svg');
     if($(window).width() < 960) {
@@ -395,7 +395,7 @@ Drupal.behaviors.hbvFixCow = {
       var height = $text.outerHeight();;
       var x = Math.ceil(0.225 * (0.83 * height - width));
       var h = Math.ceil(width * 1.2);
-      
+
       if( width/height < 0.83) {
         $svg.css({'margin-top': mt, 'height': height + x});
         $(parent).css('height', height + x);
@@ -457,16 +457,13 @@ Drupal.behaviors.hbvSingleRecipeMin = {
     });
   },
   setMinHeight: function (parent) {
-    var $g1 = $(parent).find('.group-g1');
-    var $measurement = $(parent).find('.miara');
+    return;
+    var $g2 = $(parent).find('.group-g2');
     var $ytable = $(parent).find('.group-ytable');
-    
-    if($measurement.height() < $g1.height()) {
-      $ytable.css('height', $g1.height());
+
+    if($g2.height() < ($g2.outerWidth() * 1.2)) {
+      $ytable.css('height', ($g2.outerWidth() * 1.2));
     }
-    
-    var $img = $(parent).find('.field-name-field-top-image');
-    $g2.css('min-height', $img.height());
   },
 };
 
@@ -490,7 +487,7 @@ $(window).resize(function () {
   $('.paragraphs-item-intro-text').each( function () {
     Drupal.behaviors.hbvLimitTextWidth.setContainerWidth(this);
   });
-  
+
   $('body.front .paragraphs-items-field-front-m1').each( function () {
     Drupal.behaviors.hbvFixCow.fixCowHeight(this);
   });

@@ -335,11 +335,11 @@
         position: relative
   .group-footer
     svg
-      margin-top: -150px
+      margin-top: 10px
       position: relative
       z-index: 10
       @media all and (min-width: 1px) and (max-width: 1000px)
-        margin-top: -10vw
+        margin-top: 10vw
       @media all and (min-width: 1px) and (max-width: 767px)
         margin-top: -0vw
     .field-name-field-front-f1
@@ -359,7 +359,7 @@
           width: 32%
           position: absolute
           right: 0
-          bottom: 180px
+          bottom: 190px
           z-index: 10
           +box-sizing(border-box)
           padding: 0 10px 0 0
@@ -367,6 +367,8 @@
           @media all and (min-width: 768px) and (max-width: 1000px)
             width: 50%
             bottom: 18vw
+            // width: 33%
+            // bottom: 38vw
           @media all and (min-width: 1px) and (max-width: 767px)
             width: 100%
             padding: 30vw 0 0 40px
@@ -413,3 +415,19 @@
         padding: 40px 40px 60px 40px
         max-height: 400px
         opacity: 1
+
+.front.node-type-front-page
+  #page
+    .field-name-field-front-h1
+      text-align: center
+      h2
+        font-size: 32px
+        line-height: 40px
+        font-family: "Open Sans"
+        font-weight: 700
+
+.view-id-recipe_to_front
+  font-size: 14px
+  line-height: 20px
+  font-family: "Open Sans"
+  font-weight: 700

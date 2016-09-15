@@ -27,12 +27,31 @@
         padding: 100px 40px 100px
         padding: 0 40px
         +box-sizing(border-box)
+        @media all and (min-width: 1040px)
+          min-height: 588px
+          table
+            height: 588px
+            td
+              padding: 130px 0 100px
+        @media all and (min-width: 1px) and (max-width: 1039px)
+          min-height: 58vw
+          table
+            height: 58vw
+            td
+              padding: 100px 0 100px
+        @include breakpoint($m)
+          min-height: 115vw
+          table
+            height: 115vw
+            td
+              padding: 100px 0 130px
         &::after
           position: absolute
           left: 0
           bottom: 0
           width: 100%
           height: 85px
+          height: 105px
           content: " "
           background: transparent url('i/marmur-skos-after.png') no-repeat right top
           z-index: 2
@@ -46,8 +65,9 @@
           width: 100%
           margin-top: -12vw
           padding: 150px 40px 150px
+          padding: 0 40px
           &::after
-            height: 120px
+            height: 140px
         table
           margin: 0
         td
@@ -104,11 +124,16 @@
       padding: 40px 0
   .node.node-recipe .group-footer
     display: none
-  ul
-    li
-      list-style-type: none
-      list-style-image: url('i/list.png')
-      vertical-align: middle
+  .node.node-recipe
+    ul
+      padding: 0
+      li
+        list-style-type: none
+        list-style-image: none
+        vertical-align: middle
+        background: transparent url('i/list.png') no-repeat 0px 10px
+        padding: 0 0 0 15px
+        margin: 0 0 2px
 // .node-type-recipe END
 
 .view-id-recipes_3_random
@@ -170,16 +195,20 @@
       text-indent: -9990px
   .views-row:hover
     h2, h3
-      padding: 40px 40px 90px 40px
-      max-height: 400px
+      padding: 40px 40px 50px 40px
+      // max-height: 400px
       opacity: 1
+      height: auto
+      max-height: 1000px
+      @include breakpoint($m)
+        padding: 40px 40px 90px
       span
         transform: translateY(400px)
         animation: come-in 900ms ease forwards
   .views-row.is-hover
     h2, h3
       padding: 40px 40px 90px 40px
-      max-height: 400px
+      // max-height: 400px
       opacity: 1
 
 
@@ -195,11 +224,13 @@
     .views-field-field-slogan
       padding: 70px 30px 110px
       position: relative
-      font-size: 28px
-      line-height: 28px
-      @include breakpoint($m)
-        font-size: 24px
-        line-height: 24px
+      font-size: 18px
+      line-height: 24px
+      font-weight: 700
+      font-family: "Open Sans"
+      // @include breakpoint($m)
+      //   font-size: 24px
+      //   line-height: 24px
       .div-image
         display: block
         position: absolute
@@ -220,3 +251,40 @@
 //     .views-row
 //       float: left
 //       width: 50%
+
+
+.node-recipe
+  h1
+    font-size: 18px
+    line-height: 25px
+    font-family: "Open Sans"
+    font-weight: 700
+  .field-label
+    font-size: 16px
+    font-family: "Open Sans Condensed"
+    font-weight: 700
+    line-height: 22px
+  .field-items
+    font-size: 16px
+    font-family: "Open Sans Condensed"
+    font-weight: 300
+    line-height: 22px
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid .group-left .field-label,
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid .group-right .field-label
+  font-size: 18px
+  line-height: 25px
+  font-family: "Open Sans"
+  font-weight: 700
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid .group-left .field-label strong,
+.node-type-recipe .view-mode-full.ds-2col-stacked-fluid .group-right .field-label strong
+  font-size: 16px
+  line-height: 22px
+  font-family: "Open Sans Condensed"
+  font-weight: 700
+
+.view-id-recipes
+  h3
+    font-size: 14px
+    line-height: 20px
+    font-weight: 700
+    font-family: "Open Sans"

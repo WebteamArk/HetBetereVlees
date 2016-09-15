@@ -27,9 +27,9 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Address'			, element : 'address' },
             */
 
-            { name : 'Color H3'		, element : 'h3', styles : { 'color' : '#A30000' } },
+            { name : 'Color'		, element : 'p', styles : { 'color' : '#A30000', 'font-weight' : '700' } },
 
-
+            { name : 'Open Sans Regular 22px'		, element : 'p', styles : { 'font-family' : 'Open Sans', 'font-weight' : '500', 'font-size' : '22px', 'line-height' : '28px' } },
 
 
     ]);
