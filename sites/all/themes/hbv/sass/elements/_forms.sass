@@ -10,12 +10,48 @@ textarea
   width: 100%
   +box-sizing(border-box)
   color: #000
-  padding-left: 5px
+  padding-left: 20px
   +border-radius(2px)
 input.form-text,
-input.form-email
+input.form-email,
+.block-mailchimp-signup input
   line-height: 30px
-  height: 30px
+  height: 32px
+  font-size: 20px
+  @include breakpoint($m)
+    font-size: 18px
+textarea
+  line-height: 30px
+  font-size: 20px
+  @include breakpoint($m)
+    font-size: 18px
+
+input::-webkit-input-placeholder,
+  color: #000 !important
+  opacity: 1
+input:-moz-placeholder
+  color: #000 !important
+  opacity: 1
+input::-moz-placeholder
+  color: #000 !important
+  opacity: 1
+input:-ms-input-placeholder
+  color: #000 !important
+  opacity: 1
+textarea::-webkit-input-placeholder,
+  color: #000 !important
+  opacity: 1
+textarea:-moz-placeholder
+  color: #000 !important
+  opacity: 1
+textarea::-moz-placeholder
+  color: #000 !important
+  opacity: 1
+textarea:-ms-input-placeholder
+  color: #000 !important
+  opacity: 1
+
+
 textarea
   height: 200px
 .form-actions
@@ -34,36 +70,54 @@ textarea
     line-height: 30px
     padding: 0 40px
     background: #000
-    border: none
+    border: 1px solid #000
     position: relative
     z-index: 1
-    &:hover
-      background-color: #333
-.aaaa
-  .select-wrapper, .form-type-select
-    width: 100%
-    background: transparent url('i/select.png') no-repeat right center
-    overflow: hidden
-    height: 30px
-    line-height: 30px
-    +box-sizing(border-box)
-    padding: 0
-    position: relative
-    z-index: 1
-    border: 1px solid #333
-    +box-shadow(0 0 1px #fafafa)
-    select
-      border: none
-      background: transparent
-      +border-radius(0)
-      width: 130%
-      display: block
-      +box-sizing(border-box)
-      +appearance(none)
-      padding-left: 5px
+    font-size: 22px
+    @include breakpoint($m)
+      font-size: 17px
       line-height: 30px
-      height: 30px
+    &:hover
+      background-color: #fff
       color: #000
+input#edit-submit-distributors, 
+input#edit-submit-search-by-zip
+  display: block
+  float: right
+  line-height: 32px
+  padding: 0 40px
+  background: #fff
+  color: #000
+  border: 1px solid #000
+  position: relative
+  z-index: 1
+  font-size: 22px
+  @include breakpoint($m)
+    font-size: 17px
+    line-height: 32px
+    padding: 0 20px
+  &:hover
+    background-color: #000
+    color: #fff
+  // color: #fff
+  // display: block
+  // float: right
+  // line-height: 30px
+  // padding: 0 0px
+  // height: 30px
+  // width: 100px
+  // background: #000 url('i/szukaj.png') no-repeat center center
+  // border: none
+  // position: relative
+  // z-index: 1
+  // text-indent: -9990px
+  // &:hover
+  //   opacity: 0.8
+  // @media all and (min-width: 460px) and (max-width: 600px)
+  //   width: 80px
+  // @media all and (min-width: 1px) and (max-width: 459px)
+  //   width: 50px
+
 
 
 .webform-client-form
@@ -81,7 +135,8 @@ textarea
       +border-radius(0)
       padding: 0 70px
       &:hover
-        opacity: 0.75
+        background: #fff
+        color: #000
 
 #mc_embed_signup
   display: none
@@ -110,11 +165,47 @@ textarea
       > ul
         @include ulReset
         padding: 20px
-  .ms-options-wrap > .ms-options > ul input[type="checkbox"]
-    left: 0
-    margin-right: 5px
-    position: absolute
-    top: 12px
+  .ms-options-wrap
+    button
+      background: transparent url('i/recipes-button.png') no-repeat right center
+      font-size: 20px
+      padding-left: 20px
+      &:after
+        display: none !important
+    > .ms-options
+      > ul
+        label
+          padding: 0 !important
+        input[type="checkbox"]
+          left: -9990px
+          margin-right: 5px
+          position: absolute
+          top: 12px
+          &:after
+            position: absolute
+            lefft: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background: red
+            z-index: 100
+            display: block
+            content: " "
+        span
+          display: inline-block
+          background: transparent url("i/check-out.png") no-repeat scroll left center
+          cursor: pointer
+          line-height: 20px
+          margin: 0 0 0px
+          padding: 5px 0 5px 30px
+          font-size: 20px
+        input:checked + span
+          background: transparent url("i/check-on.png") no-repeat scroll left center
+
+
+
+
+
   ul + input,
   ul + input + input
     display: inline-block
@@ -129,7 +220,7 @@ textarea
     font-size: 22px
     line-height: 30px
     +box-sizing(border-box)
-    border: none
+    border: 1px solid #000
     @include breakpoint($t)
       font-size: 17px
       line-height: 30px
@@ -137,7 +228,12 @@ textarea
       font-size: 17px
       line-height: 30px
     &:hover
-      opacity: 0.8
+      background: #fff
+      color: #000
   #edit-submit-recipes,
   #edit-reset
+    display: none
+
+.block-mailchimp-signup
+  label
     display: none

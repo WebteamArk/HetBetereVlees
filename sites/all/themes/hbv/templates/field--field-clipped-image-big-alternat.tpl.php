@@ -5,7 +5,7 @@
   <div class="field-items"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item): ?>
       <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>>
-        <svg viewBox="0 0 960 700" style="width: 100%; height: auto;">
+        <svg viewBox="0 0 960 700" style="width: 100%; height: auto;" preserveAspectRatio="xMidYMid slice">
     			<clipPath id="clip-<?php print $item['#item']['fid'];?>">
       			<use xlink:href="#hbv-poly-960-700"/>
     			</clipPath>

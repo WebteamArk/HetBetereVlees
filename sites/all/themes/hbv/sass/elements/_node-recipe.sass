@@ -11,7 +11,13 @@
       .g1
         width: 50%
         float: left
-        margin-top: -128px
+        margin-top: -100px
+        @include breakpoint($t)
+          width: 35%
+          width: 50%
+          margin-top: -14px
+        @include breakpoint($m)
+          width: 100%
       .g2
         width: 50%
         float: left
@@ -19,6 +25,7 @@
         position: relative
         z-index: 1
         padding: 100px 40px 100px
+        padding: 0 40px
         +box-sizing(border-box)
         &::after
           position: absolute
@@ -29,9 +36,26 @@
           content: " "
           background: transparent url('i/marmur-skos-after.png') no-repeat right top
           z-index: 2
+        @include breakpoint($t)
+          width: 65%
+          width: 50%
+          margin-top: -50px
+          &::after
+            height: 100px
+        @include breakpoint($m)
+          width: 100%
+          margin-top: -12vw
+          padding: 150px 40px 150px
+          &::after
+            height: 120px
+        table
+          margin: 0
+        td
+          vertical-align: middle
         .field
           .field-label
             margin: 0 10px 0 0
+            text-transform: uppercase
           .field-item
             display: inline-block
             margin: 0 5px 0 0
@@ -39,16 +63,24 @@
       position: relative
       margin-top: 40px
       width: 33%
+      @include breakpoint($t)
+        width: 35%
+      @include breakpoint($m)
+        width: 100%
       .field-label
-        font-size: 150%
+        font-size: 200%
         line-height: 120%
     > .group-right
       position: relative
       margin-top: 40px
       width: 66%
       float: right
+      @include breakpoint($t)
+        width: 65%
+      @include breakpoint($m)
+        width: 100%
       .field-label
-        font-size: 150%
+        font-size: 200%
         line-height: 120%
       .field-name-link-to-recipes
         margin: 85px 0 0 0
@@ -70,11 +102,47 @@
       clear: both
       display: block
       padding: 40px 0
+  .node.node-recipe .group-footer
+    display: none
+  ul
+    li
+      list-style-type: none
+      list-style-image: url('i/list.png')
+      vertical-align: middle
+// .node-type-recipe END
 
-.view-id-recipes
+.view-id-recipes_3_random
+  padding-top: 40px
+  .view-content
+    @media all and (min-width: 860px)
+      .views-row:nth-child(1)
+        margin-top: 50px
+      .views-row:nth-child(2)
+        margin-top: 100px
+    &:after
+      @include clearfix
+  .views-row
+    width: 33%
+    float: left
+    +box-sizing(border-box)
+    padding: 0 1%
+    @media all and (min-width: 500px) and (max-width: 859px)
+      width: 50%
+      float: left
+      &:nth-child(3)
+        display: none
+    @media all and (min-width: 1px) and (max-width: 499px)
+      width: 100%
+      float: none
+
+
+
+.view-id-recipes,
+.view-id-recipes_3_random
   .views-row
     position: relative
-    h2
+    h2, h3
+      height: 0
       position: absolute
       left: 0
       bottom: 0
@@ -82,9 +150,16 @@
       +box-sizing(border-box)
       padding: 0 40px
       margin: 0
-      background: rgba(255,255,255,0.75)
       height: 0
-      overflow: hidden
+      background-color: rgba(255,255,255,0.75)
+      overflow-y: hidden
+      max-height: 0
+      transition-property: all
+      transition-duration: .8s
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+      opacity: 0
+      span
+        display: block
     a.link-absolute
       position: absolute
       left: 0
@@ -94,9 +169,19 @@
       z-index: 10
       text-indent: -9990px
   .views-row:hover
-    h2
-      height: auto
-      padding: 50px 40px 80px 40px
+    h2, h3
+      padding: 40px 40px 90px 40px
+      max-height: 400px
+      opacity: 1
+      span
+        transform: translateY(400px)
+        animation: come-in 900ms ease forwards
+  .views-row.is-hover
+    h2, h3
+      padding: 40px 40px 90px 40px
+      max-height: 400px
+      opacity: 1
+
 
 
 .view-id-recipes
@@ -110,7 +195,11 @@
     .views-field-field-slogan
       padding: 70px 30px 110px
       position: relative
-      font-size: 24px
+      font-size: 28px
+      line-height: 28px
+      @include breakpoint($m)
+        font-size: 24px
+        line-height: 24px
       .div-image
         display: block
         position: absolute
@@ -126,3 +215,8 @@
         bottom: 0
         img
           margin-top: -50px
+// .node-type-recipe
+//   .view-id-recipes_3_random
+//     .views-row
+//       float: left
+//       width: 50%

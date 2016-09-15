@@ -4,12 +4,10 @@
     padding: 0 0px
     .field-item
       margin-top: 0
-
-
   .node.view-mode-full
-    margin-top: 28px
+    margin-top: -25px
     font-size: 18px
-    line-height: 150%
+    line-height: 150% 
   .g3
     position: relative
     z-index: 1
@@ -27,16 +25,24 @@
         .div-cell
           padding: 0 40px
           font-size: 20px
-          line-height: 120%
+          line-height: 24px
+          @include breakpoint($t)
+            font-size: 18px
+            line-height: 22px
+          @include breakpoint($m)
+            font-size: 18px
+            line-height: 22px
           p
             margin: 0
+          p + p
+            margin-top: 25px
   .group-left
     float: left
     width: 50%
   .group-right
     float: left
     width: 50%
-    margin-top: 27px
+    margin-top: 103px
   @media all and (min-width: 1px) and (max-width: 768px)
     .group-left
       float: none
@@ -47,7 +53,13 @@
       margin-top: -15%
 
   .entity-paragraphs-item
-    margin-top: -57px
+    margin-top: -60px
+    @media all and (min-width: 1000px)
+      margin-top: -60px
+    @include breakpoint($t)
+      margin-top: -5vw
+    @include breakpoint($m)
+      margin-top: -14vw
     &.paragraphs-item-intro-text
       margin: 0
       padding: 80px 40px 60px
@@ -55,22 +67,33 @@
         font-size: 32px
         line-height: 120%
         margin: 0 0 10px
-  .node.view-mode-full
-    h2
-      font-size: 50px
-      line-height: 120%
-      margin: 0 0 10px
-  .node.view-mode-full.actie
-    h2
-      color: $KolorMain
-      padding: 50px 0 0 0
-      background: transparent url('i/Arrow.png') no-repeat right top
   .node.view-mode-full.actie
     .styles-white-font-color
+      font-size: 20px
+      line-height: 24px
+      @include breakpoint($t)
+        font-size: 18px
+        line-height: 22px
+      @include breakpoint($m)
+        font-size: 18px
+        line-height: 22px
       h2
         color: #fff
         padding: 0 0 0 0
         background-image: none
+        font-size: 60px
+        line-height: 60px
+        margin: 0 0 10px
+        font-weight: 300
+        @include breakpoint($t)
+          font-size: 44px
+          line-height: 44px
+        @include breakpoint($m)
+          font-size: 44px
+          line-height: 44px
+          font-size: 42px
+          line-height: 42px
+
   .group-footer
     .paragraphs-item-svg-big-alternative
       position: relative

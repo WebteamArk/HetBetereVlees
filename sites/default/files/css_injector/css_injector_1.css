@@ -2,3 +2,13 @@ body.cke_editable {
   background: #000 none repeat scroll 0 0;
   color: #fff;
 }
+
+.field-widget-paragraphs-embed tr.even, .field-widget-paragraphs-embed tr.odd {
+    background: #f3f4ee none repeat scroll 0 0;
+    border-color: #FFFADB;
+    border-style: solid;
+    border-width: 0 1px;
+}
+.field-widget-paragraphs-embed tr.odd {
+    background: #EAF7FF none repeat scroll 0 0;
+}
