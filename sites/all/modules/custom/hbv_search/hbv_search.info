@@ -1,0 +1,4 @@
+name = HBV Search
+description = Dealers search query alter.
+core = 7.x
+package = Custom

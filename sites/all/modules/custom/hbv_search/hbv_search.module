@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file hbv_search.module
+ * @author Jacek Szmit
+ */
+
+/**
+ * Implements hook_views_query_alter()
+ */
+function hbv_search_views_query_alter(&$view, &$query) {
+  if ($view->name == 'search_by_zip') {
+    if (!isset($query->where[1]['conditions'][3]) && !isset($query->where[1]['conditions'][4] )) {
+      $query->where[1]['conditions'][0]['value'] = '-1';
+    }
+  }
+}
