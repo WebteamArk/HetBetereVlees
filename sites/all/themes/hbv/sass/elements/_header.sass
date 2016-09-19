@@ -180,7 +180,8 @@
       line-height: 26px
     h1
       margin: 0 0 20px
-      padding: 0
+      padding: 0 5px
+      +box-sizing(border-box)
       color: #fff
       @include breakpoint($t)
         font-size: 26px
@@ -222,6 +223,7 @@
     @include breakpoint($as)
       display: none
     .home-page-assets
+      margin-top: -35px
       .field-name-field-asset-1
         .field-item
           position: absolute

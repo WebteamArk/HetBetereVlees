@@ -334,6 +334,8 @@
         margin-top: 0
         position: relative
   .group-footer
+    @media all and (min-width: 1000px)
+      margin-top: -200px
     svg
       margin-top: 10px
       position: relative
@@ -409,6 +411,10 @@
         a
           transform: translateY(400px)
           animation: come-in 900ms ease forwards
+        span
+          display: inline-block
+          transform: translateY(400px)
+          animation: come-in 900ms ease forwards
   .field-type-viewreference
     .is-hover
       .views-field-title
@@ -431,3 +437,8 @@
   line-height: 20px
   font-family: "Open Sans"
   font-weight: 700
+
+.front
+  .field-name-field-intro-text
+    h3, strong
+      font-family: "Open Sans"
